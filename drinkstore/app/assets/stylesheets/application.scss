@@ -1,7 +1,8 @@
+@import "bootstrap-sprockets";
 @import "bootstrap";
 @import "compass";
-@import "drinkstore/mixins";
-@import "drinkstore/base";
+@import "loja/mixins";
+@import "loja/base";
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
@@ -17,4 +18,12 @@
  *
  */
 
-require_tree . require_self
+
+/*
+ *= require_tree .
+ */
+
+
+/*
+ *= require_self
+ */
