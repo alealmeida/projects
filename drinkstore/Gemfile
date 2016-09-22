@@ -24,7 +24,7 @@ gem 'sass-rails', '~> 5.0'
 
 gem 'bootstrap', '~> 4.0.0.alpha4'
 gem 'pug-rails', '~> 2.0'
-
+gem 'coffee-script', '~> 2.4', '>= 2.4.1'
 
 
 
