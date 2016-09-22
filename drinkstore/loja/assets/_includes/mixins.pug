@@ -1,8 +1,0 @@
-append head
-	mixin link(nome)
-		-var link_attr = {}
-		- link_attr.href= css_dir+nome
-		- link_attr.media= "screen"
-		- link_attr.rel= "stylesheet"
-		- link_attr.type= "text/css"
-		link&attributes(link_attr)
