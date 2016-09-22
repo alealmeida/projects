@@ -106,9 +106,8 @@ GEM
       mini_portile2 (~> 2.1.0)
       pkg-config (~> 1.1.7)
     pkg-config (1.1.7)
-    pug-rails (2.0.2)
-      pug-ruby (~> 1.0)
-    pug-ruby (1.0.1)
+    pug-rails (1.11.0.1)
+      tilt (~> 2.0.0)
     puma (3.6.0)
     rack (2.0.1)
     rack-test (0.6.3)
@@ -193,7 +192,7 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
-  pug-rails (~> 2.0)
+  pug-rails (~> 1.11)
   puma (~> 3.0)
   rails (~> 5.0.0, >= 5.0.0.1)
   rails-assets-tether (>= 1.1.0)!
