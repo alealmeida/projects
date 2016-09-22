@@ -2,9 +2,18 @@ append vars
 //- paths
 -var css_dir= "/assets/css/"
 -var includes= "_includes/"
--var images_dir= "/images/"
+-var img_dir= "/images/"
 -var js_dir= "/js/"
 
-
+append attr
 -var parallax= {}
-- parallax.class = 'background parallax'
+- parallax.class = 'container-fluid background parallax'
+
+
+append name_sections
+-var id="id_"
+-var cat= {}
+- cat.id_1 = " CATEGORIA: CHURRASCO"
+- cat.id_2 = " CATEGORIA: ESQUENTA"
+- cat.id_3 = " CATEGORIA: RECEBER EM CASA"
+

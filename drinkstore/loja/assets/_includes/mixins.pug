@@ -7,3 +7,61 @@ append head
 		- link_attr.rel= "stylesheet"
 		- link_attr.type= "text/css"
 		link&attributes(link_attr)
+
+	append section
+		mixin content(tag, n)
+			
+			each tags, id in {n:tag}
+				-var tags = tag
+				-var item = n
+				
+				-var texto ={}
+				- texto._1_h3 = "Churrasco"
+				- texto._1_h4 = "Drinks para acompanhar o seu"
+				- texto._1_p = "Combinações tradicionais para seu Churrasco"
+				- texto._1_h5 = "Caipirinha de Limão"
+				
+				- texto._2_h3 = "Esquenta"
+				- texto._2_h4 = "Drinks fáceis para o seu"
+				- texto._2_p = "Confira os drinks para o seu esquenta ficar ainda melhor!"
+				- texto._2_h5 = "Red Citrus"
+				
+				- texto._3_h3 = "Receber em casa"
+				- texto._3_h4 = "Drinks perfeitos para"
+				- texto._3_p = "Reunir os amigos em casa fica ainda melhor com uma seleção especial de drinks"
+				- texto._3_h5 = "Gin Tônica"
+				
+				#{tags}= (texto["_"+n+"_"+tags])
+				
+				
+		append inside_row
+
+			mixin article
+				article.content
+					header
+						+content('h4', n)
+							figure
+						+content('h3', n)
+					+content('p', n)
+
+			mixin aside(float)
+				aside.drink(class=float)
+					header
+						+content('h5', n)
+						a.icon.car(href=)
+						a.icon.plus()
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
