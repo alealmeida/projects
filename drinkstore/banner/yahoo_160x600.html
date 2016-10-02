@@ -1,0 +1,151 @@
+
+<!--append vars-->
+<!--tag LINK-->
+<!--tag--><!DOCTYPE html>
+<html>
+  <head>
+    <link href="assets/yahoo_160x600/css/example.css" media="screen" rel="stylesheet" type="text/css"/>
+    <link href="assets/yahoo_160x600/css/tweenjs.css" media="screen" rel="stylesheet" type="text/css"/>
+    <link href="assets/yahoo_160x600/css/style.css" media="screen" rel="stylesheet" type="text/css"/>
+    <script src="assets/yahoo_160x600/js/examples.js" type="text/javascript"></script>
+    <script src="assets/yahoo_160x600/js/tweenjs-NEXT.min.js" type="text/javascript"></script>
+    <script src="assets/yahoo_160x600/js/CSSPlugin.js" type="text/javascript"></script>
+    <!--[if IE] <link href="/css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" /> [endif]-->
+    <script id="editable">
+      	var w=160;
+      	var h=600;
+      	
+      function init() {
+      	createjs.CSSPlugin.install(createjs.Tween);
+      	var content = document.getElementById("scene__1");
+      	var bg_scene = document.getElementById("bg_scene");
+      	var drink_infos = document.getElementById("drink__infos");
+      	var nome_drink = document.getElementById("nome_drink");
+      	var boom = document.getElementById("boom");
+      	var frase_1 = document.getElementById("infos__frase_1");
+      	var frase_2 = document.getElementById("infos__frase_2");
+      	var frase_3 = document.getElementById("infos__frase_3");
+      	var boom_1 = document.getElementById("boom__item_1");
+      	var boom_2 = document.getElementById("boom__item_2");
+      	var conheca = document.getElementById("conheca");
+      	
+      
+      	var nome_drink = 
+      				createjs.Tween.get(nome_drink, {loop: false})
+      				.to({ left: -w }, 0).wait(2000)
+      				.to({ left: 0 },350, createjs.Ease.quintOut).wait(300)
+      				.play(frase1)
+      	var frase1 = 
+      				createjs.Tween.get(frase_1, {loop: false})
+      				.to({ left: -w*2 }, 0).wait(1400)
+      				.to({ left: 20 },400, createjs.Ease.quintOut).wait(300)
+      				.play(frase2)
+      	var frase2 = 
+      				createjs.Tween.get(frase_2, {loop: false})
+      				.to({ left: -w*2 }).wait(1550)
+      				.to({ left: 40 },350, createjs.Ease.quintOut).wait(600)
+      				.play(frase3)
+      	var frase3 = 
+      				createjs.Tween.get(frase_3, {loop: false})
+      				.to({ left: -w*2 }).wait(1500)
+      				.to({ left: 20 },650, createjs.Ease.quintOut).wait(700)
+      				
+      	var boom1 = 
+      				createjs.Tween.get(boom_1, {loop: false})
+      					.to({width: 100, height: 80, opacity:0}, 10).wait(4000)
+      					.to({width: 160, height: 110, opacity:1, left:-30, top:-15}, 700, createjs.Ease.backOut)
+      					
+      				
+      	var conheca_ = 
+      				createjs.Tween.get(conheca, {loop: false})
+      					.to({opacity:0}).wait(5300)
+      					.to({opacity:1}, 1300, createjs.Ease.Linear)
+      }
+      
+      
+    </script>
+    <style>
+      #canvas{
+      	position: relative;
+      	width: 160px;
+      	height: 600px;
+      	margin: 0 auto;
+      	background: #000;
+      	overflow:hidden;
+      }
+      #canvas *{
+      	transition: transform .2s ease-out;
+      }
+      #scene__1 {
+      	width: 160px;
+      	height: 600px;
+      	position: absolute;
+      	transition: transform .2s ease-out;
+      	top: 0;
+      	left: 0;
+      }
+      .drink{
+      	position: absolute;
+      	z-index:2;
+      	bottom: 120px; 
+      }
+      #nome_drink{
+      	position: absolute;
+      	z-index:3;
+      	bottom: 140px; 
+      	left: -150px;
+      }
+      #bg_scene {
+      	width: 160px;
+      	height: 600px;
+      	position: absolute;
+      }
+      #drink__infos {
+      	position: absolute;
+      	top: 45px;
+      	left: 0px;
+      	z-index:1;
+      }
+      
+      #infos__frase_1,#infos__frase_2,#infos__frase_3 {
+      	position: absolute;
+      	left: -320px;
+      }
+      #infos__frase_2 {
+      	top: 22px;
+      }
+      #infos__frase_3 {
+      	top: 60px;
+      }
+      #boom {
+      	position: absolute;
+      	left: 28px;
+      	top: 168px;
+      }
+      #boom__item_1 {
+      	position: relative;
+      }
+      #conheca {
+      	position: absolute;
+      	bottom:50px;
+      	right: 0px;
+      }
+      #link_gpa {
+      	position: absolute;
+      	bottom:14px;
+      	right: 45px;
+      	width: 67px;
+      	height:59px;
+      }
+    </style>
+  </head>
+  <body onload="init()">
+    <div class="content" id="canvas">
+      <div id="scene__1">
+        <div id="bg_scene" style="background:url(assets/yahoo_160x600/images/bg__scene.jpg); background-size: cover"></div><img id="nome_drink" src="assets/yahoo_160x600/images/nome_drink.png"><img class="drink" src="assets/yahoo_160x600/images/drink__caipirinha.png">
+        <div id="drink__infos"><img id="infos__frase_1" src="assets/yahoo_160x600/images/txt_aprendaos.png"><img id="infos__frase_2" src="assets/yahoo_160x600/images/txt_drinks.png"><img id="infos__frase_3" src="assets/yahoo_160x600/images/txt_erecebaosingredientes.png"></div>
+        <div id="boom"><img id="boom__item_1" src="assets/yahoo_160x600/images/logo.png"></div>
+      </div><a id="conheca"><img src="assets/yahoo_160x600/images/cta_conhecaagora.png"></a><a id="link_gpa"><img src="assets/yahoo_160x600/images/logo_gpa.png"></a>
+    </div>
+  </body>
+</html>

@@ -10,32 +10,50 @@ append head
 
 	append section
 		mixin content(tag, n)
+				
+				each tags, id in {n:tag}
+					-var tags = tag
+					-var item = n
+					
+					
+					-var texto ={}
+					case item
+						when 1
+							-texto.h3= "Churrasco"
+							-texto.h4= "Drinks para acompanhar o seu"
+							-texto.p= "Combinações tradicionais para seu Churrasco"
+							-texto.h5= "Caipirinha de Limão"
+							-var attrib = {class:'conheca', haref:'churrasco.html'}
+						when 2
+							-car= "www1.paodeacucar.com.br"
+							-plus= "receber-em-casa.html#gin-tonica"
+							-texto.h3 = "Esquenta"
+							-texto.h4 = "Drinks fáceis para o seu"
+							-texto.p = "Confira os drinks para o seu esquenta ficar ainda melhor!"
+							-texto.h5 = "Red Citrus"
+							-attrib.class = "conheca"
+							-attrib.href = "churrasco.html"
+						when 3
+							-car= "www1.paodeacucar.com.br"
+							-plus= "churrasco.html#caipirinha-limao"
+							-texto.h3 = "Receber em casa"
+							-texto.h4 = "Drinks perfeitos para"
+							-texto.p = "Reunir os amigos em casa fica ainda melhor com uma seleção especial de drinks"
+							-texto.h5 = "Gin Tônica"
+							-attrib.class = "conheca"
+							-attrib.href = "churrasco.html"
+						when 4
+							-mais_drinks= "ofertas.html"
+							-car= "www1.paodeacucar.com.br"
+							-plus= "ofertas.html#combo1"		
+					
+					#{tags}= (texto[tag])
+					
+					a&attributes(attrib)
 			
-			each tags, id in {n:tag}
-				-var tags = tag
-				-var item = n
 				
-				-var texto ={}
-				- texto._1_h3 = "Churrasco"
-				- texto._1_h4 = "Drinks para acompanhar o seu"
-				- texto._1_p = "Combinações tradicionais para seu Churrasco"
-				- texto._1_h5 = "Caipirinha de Limão"
-				
-				- texto._2_h3 = "Esquenta"
-				- texto._2_h4 = "Drinks fáceis para o seu"
-				- texto._2_p = "Confira os drinks para o seu esquenta ficar ainda melhor!"
-				- texto._2_h5 = "Red Citrus"
-				
-				- texto._3_h3 = "Receber em casa"
-				- texto._3_h4 = "Drinks perfeitos para"
-				- texto._3_p = "Reunir os amigos em casa fica ainda melhor com uma seleção especial de drinks"
-				- texto._3_h5 = "Gin Tônica"
-				
-				#{tags}= (texto["_"+n+"_"+tags])
-				
-				
+					
 		append inside_row
-
 			mixin article
 				article.content
 					header
@@ -43,25 +61,14 @@ append head
 							figure
 						+content('h3', n)
 					+content('p', n)
-
+					block area
+						a&attributes(attrib)	
+						
 			mixin aside(float)
 				aside.drink(class=float)
 					header
 						+content('h5', n)
-						a.icon.car(href=)
-						a.icon.plus()
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
+						+content('a', n)
+						a.icon.plus(href=plus)
 						
 						

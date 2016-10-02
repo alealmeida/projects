@@ -1,0 +1,74 @@
+append head
+	//-	tag link
+//	mixin link(nome)
+//		-var link_attr = {}
+//		- link_attr.href= css_dir+nome
+//		- link_attr.media= "screen"
+//		- link_attr.rel= "stylesheet"
+//		- link_attr.type= "text/css"
+//		link&attributes(link_attr)
+
+//	append section
+//		mixin content(tag, n)
+//				
+//				each tags, id in {n:tag}
+//					-var tags = tag
+//					-var item = n
+//					
+//					
+//					-var texto ={}
+//					case item
+//						when 1
+//							-texto.h3= "Churrasco"
+//							-texto.h4= "Drinks para acompanhar o seu"
+//							-texto.p= "Combinações tradicionais para seu Churrasco"
+//							-texto.h5= "Caipirinha de Limão"
+//							-var attrib = {class:'conheca', haref:'churrasco.html'}
+//						when 2
+//							-car= "www1.paodeacucar.com.br"
+//							-plus= "receber-em-casa.html#gin-tonica"
+//							-texto.h3 = "Esquenta"
+//							-texto.h4 = "Drinks fáceis para o seu"
+//							-texto.p = "Confira os drinks para o seu esquenta ficar ainda melhor!"
+//							-texto.h5 = "Red Citrus"
+//							-attrib.class = "conheca"
+//							-attrib.href = "churrasco.html"
+//						when 3
+//							-car= "www1.paodeacucar.com.br"
+//							-plus= "churrasco.html#caipirinha-limao"
+//							-texto.h3 = "Receber em casa"
+//							-texto.h4 = "Drinks perfeitos para"
+//							-texto.p = "Reunir os amigos em casa fica ainda melhor com uma seleção especial de drinks"
+//							-texto.h5 = "Gin Tônica"
+//							-attrib.class = "conheca"
+//							-attrib.href = "churrasco.html"
+//						when 4
+//							-mais_drinks= "ofertas.html"
+//							-car= "www1.paodeacucar.com.br"
+//							-plus= "ofertas.html#combo1"		
+//					
+//					#{tags}= (texto[tag])
+//					
+//					a&attributes(attrib)
+//			
+//				
+//					
+//		append inside_row
+//			mixin article
+//				article.content
+//					header
+//						+content('h4', n)
+//							figure
+//						+content('h3', n)
+//					+content('p', n)
+//					block area
+//						a&attributes(attrib)	
+//						
+//			mixin aside(float)
+//				aside.drink(class=float)
+//					header
+//						+content('h5', n)
+//						+content('a', n)
+//						a.icon.plus(href=plus)
+//						
+						

@@ -1,0 +1,15 @@
+// Screen
+// ======
+@import "grids";
+body {
+	margin: 0;
+}
+
+#scene__1 {
+	position: absolute;
+	.bg_scene {
+		width: 300px;
+		height: 300px;
+	}
+	.item {}
+}

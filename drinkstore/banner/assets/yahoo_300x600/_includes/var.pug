@@ -1,0 +1,19 @@
+//append vars
+
+
+-var css_dir= "assets/yahoo_300x600/css/"
+-var img_dir= "assets/yahoo_300x600/images/"
+-var js_dir= "assets/yahoo_300x600/js/"
+
+append head
+	//tag LINK
+	mixin link(nome)
+		-var link_attr = {href: css_dir+nome, media: "screen", rel: "stylesheet", type: "text/css"}
+		
+		link&attributes(link_attr)
+		
+	//tag
+	mixin script(nome)
+		-var script_attr = {src: js_dir+nome, type: "text/javascript"}
+		
+		script&attributes(script_attr)
