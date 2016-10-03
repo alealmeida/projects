@@ -55,11 +55,10 @@
       					.to({width: 160, height: 100, opacity:0}, 10).wait(4000)
       					.to({width: 219, height: 127, opacity:1, left:-30, top:-15}, 700, createjs.Ease.backOut)
       					
-      				
-      	var conheca_ = 
-      				createjs.Tween.get(conheca, {loop: false})
-      					.to({opacity:0}).wait(5300)
-      					.to({opacity:1}, 1300, createjs.Ease.Linear)
+      
+      		createjs.Tween.get(saibamais, {loop: false})
+      			.to({opacity:0}).wait(8300)
+      			.to({opacity:1}, 1300, createjs.Ease.Linear)
       }
       
       
@@ -92,17 +91,17 @@
       #nome_drink{
       	position: absolute;
       	z-index:3;
-      	bottom: 20px; 
+      	bottom: 5px;
       	left: -150px;
       }
       #bg_scene {
-      	width: 600px;
-      	height: 440px;
+      	width: 480px;
+      	height: 320px;
       	position: absolute;
       }
       #drink__infos {
       	position: absolute;
-      	top: 40px;
+      	top: 140px;
       	z-index:1;
       }
       #infos__frase_1,#infos__frase_2,#infos__frase_3 {
@@ -118,7 +117,7 @@
       #boom {
       	position: absolute;
       	left: 230px;
-      	top: 140px;
+      	top: 25px;
       	height: 100px;
       }
       #boom__item_1 {
@@ -127,12 +126,11 @@
       a {
       	
       }
-      #conheca {
+      
+      #saibamais {
       	position: absolute;
-      	bottom:0px;
-      	right: 80px;
-      	width: 243px;
-      	height:93px;
+      	bottom:2px;
+      	right: 85px;
       }
       
       #link_gpa {
@@ -142,15 +140,23 @@
       	width: 67px;
       	height:59px;
       }
+      #aprecie {
+      	position: absolute;
+      	bottom:0px;
+      	left: 5px;
+      	width:103px;
+      	height: 24px;
+      	z-index:3;
+      }
     </style>
   </head>
   <body onload="init()">
     <div class="content" id="canvas">
       <div id="scene__1">
-        <div id="bg_scene" style="background:url(assets/yahoo_480x320/images/bg__scene.jpg); background-size: cover"></div><img id="nome_drink" src="assets/yahoo_480x320/images/nome_drink.png"><img class="drink" src="assets/yahoo_480x320/images/drink__ciroc.png">
+        <div id="bg_scene" style="background:url(assets/yahoo_480x320/images/bg__scene.jpg); background-size: cover"></div><img id="nome_drink" src="assets/yahoo_480x320/images/nome_drink.png"><img class="drink" src="assets/yahoo_480x320/images/drink__whisky.png">
         <div id="drink__infos"><img id="infos__frase_1" src="assets/yahoo_480x320/images/txt_aprendaafazer.png"><img id="infos__frase_2" src="assets/yahoo_480x320/images/txt_osdrinksereceba.png"><img id="infos__frase_3" src="assets/yahoo_480x320/images/txt_osingredientesemcasa.png"></div>
         <div id="boom"><img id="boom__item_1" src="assets/yahoo_480x320/images/logo.png"></div>
-      </div><a id="conheca"><img src="assets/yahoo_480x320/images/cta_conhecaagora.png"></a><a id="link_gpa"><img src="assets/yahoo_480x320/images/logo_gpa.png"></a>
+      </div><img id="saibamais" src="assets/yahoo_480x320/images/cta_saibamais.png"><img id="link_gpa" src="assets/yahoo_480x320/images/logo_gpa.png"><img id="aprecie" src="assets/yahoo_480x320/images/txt_apreciecommoderacao.png">
     </div>
   </body>
 </html>

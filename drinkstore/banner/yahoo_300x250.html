@@ -67,14 +67,18 @@
       					
       			createjs.Tween.get(gpa, {loop: false})
       					.to({ width: 86, height: 74, right:105, bottom:14 },5, createjs.Ease.Linear).wait(2450)
-      					.to({ width: 69, height: 59, right: 10, bottom:4},450, createjs.Ease.quintOut)
+      					.to({ width: 69, height: 59, right: 13, bottom:10},450, createjs.Ease.quintOut)
       					.call(scene2)
       	}
       	
       	function scene2(){
       			createjs.Tween.get(nome_drink, {loop: false})
       			.to({ left: -w/10 }, 0)
-      			.to({ left: 30 },300, createjs.Ease.quintOut).wait(300)
+      			.to({ left: 0 },300, createjs.Ease.quintOut).wait(300)
+      		createjs.Tween.get(boom_1, {loop: false})
+      			.to({width: 0, height: 0, opacity:1}, 0)
+      			.to({width: 100, height: 80, opacity:0}, 0).wait(2500)
+      			.to({width: 165, height: 104, opacity:1, left:-30, top:-15}, 700, createjs.Ease.backOut).wait(2500)
       
       		createjs.Tween.get(frase_1, {loop: false})
       				.to({ left: -w*2 }, 0).wait(800)
@@ -88,10 +92,6 @@
       				.to({ left: -w*2 }).wait(800)
       				.to({ left: 20 },650, createjs.Ease.quintOut).wait(700)
       
-      		createjs.Tween.get(boom_1, {loop: false})
-      			.to({width: 0, height: 0, opacity:1}, 0)
-      			.to({width: 100, height: 80, opacity:0}, 0).wait(2500)
-      			.to({width: 165, height: 104, opacity:1, left:-30, top:-15}, 700, createjs.Ease.backOut).wait(2500)
       
       		}	
       							
@@ -163,7 +163,7 @@
       
       #drink__infos {
       	position: absolute;
-      	top: 25px;
+      	top: 105px;
       	left: 120px;
       	z-index:1;
       }
@@ -180,7 +180,7 @@
       #boom {
       	position: absolute;
       	left: 152px;
-      	top: 104px;
+      	top: 14px;
       }
       #boom__item_1 {
       	position: relative;
@@ -197,6 +197,13 @@
       	width:86px;
       	height:74px;
       }
+      #aprecie {
+      	position: absolute;
+      	bottom:0px;
+      	right: 5px;
+      	width:138px;
+      	height:20px;
+      }
     </style>
   </head>
   <body onload="init()">
@@ -205,10 +212,10 @@
       <div id="scene__1">
         <div id="chamadas"><img id="chamada__frase_1" src="assets/yahoo_300x250/images/txt_aproximafesta.png"><img id="chamada__frase_2" src="assets/yahoo_300x250/images/txt_enasuacasa.png"></div>
       </div>
-      <div id="scene__2"><img id="nome_drink" src="assets/yahoo_300x250/images/nome_drink.png"><img class="drink" src="assets/yahoo_300x250/images/drink__ciroc.png">
+      <div id="scene__2"><img id="nome_drink" src="assets/yahoo_300x250/images/nome_drink.png"><img class="drink" src="assets/yahoo_300x250/images/drink__whisky.png">
         <div id="drink__infos"><img id="infos__frase_1" src="assets/yahoo_300x250/images/txt_aprendaosdrinks.png"><img id="infos__frase_2" src="assets/yahoo_300x250/images/txt_ereceba.png"><img id="infos__frase_3" src="assets/yahoo_300x250/images/txt_osingredientes.png"></div>
         <div id="boom"><img id="boom__item_1" src="assets/yahoo_300x250/images/logo.png"></div>
-      </div><img id="link_gpa" src="assets/yahoo_300x250/images/logo_gpa.png">
+      </div><img id="link_gpa" src="assets/yahoo_300x250/images/logo_gpa.png"><img id="aprecie" src="assets/yahoo_300x250/images/txt_apreciecommoderacao.png">
     </div>
   </body>
 </html>

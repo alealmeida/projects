@@ -56,11 +56,10 @@ html
 								.to({width: 160, height: 100, opacity:0}, 10).wait(4000)
 								.to({width: 219, height: 127, opacity:1, left:-30, top:-15}, 700, createjs.Ease.backOut)
 								
-							
-				var conheca_ = 
-							createjs.Tween.get(conheca, {loop: false})
-								.to({opacity:0}).wait(5300)
-								.to({opacity:1}, 1300, createjs.Ease.Linear)
+
+					createjs.Tween.get(saibamais, {loop: false})
+						.to({opacity:0}).wait(8300)
+						.to({opacity:1}, 1300, createjs.Ease.Linear)
 			}
 			
 			
@@ -92,17 +91,17 @@ html
 			#nome_drink{
 				position: absolute;
 				z-index:3;
-				bottom: 20px; 
+				bottom: 5px;
 				left: -150px;
 			}
 			#bg_scene {
-				width: 600px;
-				height: 440px;
+				width: 480px;
+				height: 320px;
 				position: absolute;
 			}
 			#drink__infos {
 				position: absolute;
-				top: 40px;
+				top: 140px;
 				z-index:1;
 			}
 			#infos__frase_1,#infos__frase_2,#infos__frase_3 {
@@ -118,7 +117,7 @@ html
 			#boom {
 				position: absolute;
 				left: 230px;
-				top: 140px;
+				top: 25px;
 				height: 100px;
 			}
 			#boom__item_1 {
@@ -127,12 +126,11 @@ html
 			a {
 				
 			}
-			#conheca {
+
+			#saibamais {
 				position: absolute;
-				bottom:0px;
-				right: 80px;
-				width: 243px;
-				height:93px;
+				bottom:2px;
+				right: 85px;
 			}
 			
 			#link_gpa {
@@ -142,21 +140,28 @@ html
 				width: 67px;
 				height:59px;
 			}
+			#aprecie {
+				position: absolute;
+				bottom:0px;
+				left: 5px;
+				width:103px;
+				height: 24px;
+				z-index:3;
+			}
 	body(onload="init()")
 		div#canvas.content
-				div#scene__1
-					div#bg_scene(style="background:url("+img_dir+"bg__scene.jpg); background-size: cover")
-					img#nome_drink(src=img_dir+'nome_drink.png')
-					img.drink(src=img_dir+'drink__ciroc.png')
-					div#drink__infos
-						img#infos__frase_1(src=img_dir+'txt_aprendaafazer.png')
-						img#infos__frase_2(src=img_dir+'txt_osdrinksereceba.png')
-						img#infos__frase_3(src=img_dir+'txt_osingredientesemcasa.png')
-					
-					div#boom
-						img#boom__item_1(src=img_dir+'logo.png')
-					
-				a#conheca
-					img(src=img_dir+'cta_conhecaagora.png')
-				a#link_gpa
-					img(src=img_dir+'logo_gpa.png')
+			div#scene__1
+				div#bg_scene(style="background:url("+img_dir+"bg__scene.jpg); background-size: cover")
+				img#nome_drink(src=img_dir+'nome_drink.png')
+				img.drink(src=img_dir+'drink__whisky.png')
+				div#drink__infos
+					img#infos__frase_1(src=img_dir+'txt_aprendaafazer.png')
+					img#infos__frase_2(src=img_dir+'txt_osdrinksereceba.png')
+					img#infos__frase_3(src=img_dir+'txt_osingredientesemcasa.png')
+
+				div#boom
+					img#boom__item_1(src=img_dir+'logo.png')
+
+			img#saibamais(src=img_dir+'cta_saibamais.png')
+			img#link_gpa(src=img_dir+'logo_gpa.png')
+			img#aprecie(src=img_dir+'txt_apreciecommoderacao.png')
