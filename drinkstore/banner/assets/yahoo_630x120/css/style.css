@@ -1,11 +1,110 @@
-#scene__1 {
-	position: absolute;
-	width: 480px;
-	height: 320px;
+/* line 5, ../../_includes/yahoo_630x120/sass/style.scss */
+html,
+body {
+  margin: 0;
 }
 
-.bg_scene {
-	background: url('../images/bg__scene.jpg');
-	width: 480px;
-	height: 320px;
+/* line 10, ../../_includes/yahoo_630x120/sass/style.scss */
+#clickTag {
+  position: relative;
+  width: 630px;
+  height: 120px;
+  margin: 0 auto;
+  background: #000;
+  overflow: hidden;
+  display: block;
+}
+
+/* line 20, ../../_includes/yahoo_630x120/sass/style.scss */
+#canvas {
+  position: absolute;
+  width: 630px;
+  height: 120px;
+  margin: 0 auto;
+  padding: 0;
+  background: #000;
+  overflow: hidden;
+}
+/* line 28, ../../_includes/yahoo_630x120/sass/style.scss */
+#canvas * {
+  position: absolute;
+  transition: transform .2s ease-out;
+}
+/* line 32, ../../_includes/yahoo_630x120/sass/style.scss */
+#canvas #scene__1,
+#canvas #scene__2 {
+  width: 630px;
+  height: 120px;
+  top: 0;
+  left: 0;
+}
+/* line 39, ../../_includes/yahoo_630x120/sass/style.scss */
+#canvas #scene__1 {
+  z-index: 2;
+}
+/* line 41, ../../_includes/yahoo_630x120/sass/style.scss */
+#canvas #scene__1 #bg_scene {
+  width: 630px;
+  height: 120px;
+}
+/* line 45, ../../_includes/yahoo_630x120/sass/style.scss */
+#canvas #scene__1 #chamadas {
+  top: 24px;
+  left: -5px;
+  z-index: 1;
+}
+/* line 49, ../../_includes/yahoo_630x120/sass/style.scss */
+#canvas #scene__1 #chamadas #chamada__frase_1 {
+  z-index: 2;
+}
+/* line 52, ../../_includes/yahoo_630x120/sass/style.scss */
+#canvas #scene__1 #chamadas #chamada__frase_2 {
+  z-index: 2;
+  top: 12px;
+}
+/* line 56, ../../_includes/yahoo_630x120/sass/style.scss */
+#canvas #scene__1 #chamadas #chamada__frase_3 {
+  z-index: 1;
+  top: 10px;
+}
+/* line 60, ../../_includes/yahoo_630x120/sass/style.scss */
+#canvas #scene__1 #chamadas #bg_shadow {
+  top: -40px;
+  z-index: 1;
+  opacity: 0;
+}
+/* line 67, ../../_includes/yahoo_630x120/sass/style.scss */
+#canvas #scene__2 {
+  z-index: 1;
+}
+/* line 69, ../../_includes/yahoo_630x120/sass/style.scss */
+#canvas #scene__2 #bg_scene2 {
+  width: 630px;
+  height: 120px;
+}
+/* line 74, ../../_includes/yahoo_630x120/sass/style.scss */
+#canvas #boom {
+  left: -3px;
+  top: 3px;
+  z-index: 3;
+  opacity: 0;
+}
+/* line 80, ../../_includes/yahoo_630x120/sass/style.scss */
+#canvas #saibamais {
+  bottom: 0px;
+  left: -285px;
+  z-index: 3;
+}
+/* line 85, ../../_includes/yahoo_630x120/sass/style.scss */
+#canvas #link_gpa {
+  bottom: 36px;
+  right: 14px;
+  z-index: 3;
+}
+/* line 90, ../../_includes/yahoo_630x120/sass/style.scss */
+#canvas #aprecie {
+  bottom: 7px;
+  left: 10px;
+  z-index: 3;
+  color: black;
 }

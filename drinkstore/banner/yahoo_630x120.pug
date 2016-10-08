@@ -1,234 +1,36 @@
-include assets/yahoo_630x120/_includes/var.pug
+include assets/_includes/yahoo_630x120/pug/var.pug
 
 doctype html
 html
 	head
 		block head
-			+link("example.css")
-			+link("tweenjs.css")
-			+link("style.css")
-			+script("examples.js")
 			+script("tweenjs-NEXT.min.js")
 			+script("CSSPlugin.js")
+			+link("style.css")
+			
 			//[if IE] <link href="/css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" /> [endif]
-		script#editable.
-			
-				var w=630;
-				var h=120;
 				
-			function init() {
-				createjs.CSSPlugin.install(createjs.Tween);
-				var content1 = document.getElementById("scene__1");
-				var content2 = document.getElementById("scene__2");
-				var bg_scene = document.getElementById("bg_scene");
-				var nome_drink = document.getElementById("nome_drink");
-				var boom = document.getElementById("boom");
-
-				var chamadas = document.getElementById("chamadas");
-				var chamada_1 = document.getElementById("chamada__frase_1");
-				var chamada_2 = document.getElementById("chamada__frase_2");
-
-				var drink_infos = document.getElementById("drink__infos");
-				var frase_1 = document.getElementById("infos__frase_1");
-				var frase_2 = document.getElementById("infos__frase_2");
-				var frase_3 = document.getElementById("infos__frase_3");
-
-				var boom = document.getElementById("boom");
-				var boom_1 = document.getElementById("boom__item_1");
-
-				var gpa = document.getElementById("link_gpa");
-				var saibamais = document.getElementById("saibamais");
-				
-
-				content1.style.left = -w;
-				content2.style.opacity= 0;
-				content2.style.left = -w;
-				boom_1.style.opacity= 0;
-				saibamais.style.opacity= 0;
-				entrachamada();
-				function entrachamada() {
-					createjs.Tween.get(chamada_1, {loop: false})
-								.to({ left: -w }, 0).wait(1400)
-								.to({ left: 10 },400, createjs.Ease.quintOut).wait(300)
-
-					createjs.Tween.get(chamada_2, {loop: false})
-								.to({ left: -w }).wait(1550)
-								.to({ left: 60 },350, createjs.Ease.quintOut).wait(400)
-								.call(saichamada)
-
-				}
-
-				function saichamada() {
-					createjs.Tween.get(content1, {loop: false})
-								.to({ left: 0 }).wait(2300)
-								.to({ left: -w },750, createjs.Ease.quintOut).wait(1600)
-								.play(content_2)
-					
-					createjs.Tween.get(bg_scene, {loop: false})
-								.to({ top: 0 }).wait(1100)
-								.to({ top: -118 },8050, createjs.Ease.quintInOut).wait(800)		
-								
-					var content_2 = createjs.Tween.get(content2, {loop: false})
-								.to({ left: -w }).wait(2500)
-								.to({ opacity: 1,left: 0 },1050, createjs.Ease.quintOut)
-
-
-						createjs.Tween.get(gpa, {loop: false})
-								.to({ width: 76, height: 66, right:35, bottom:30 },5, createjs.Ease.Linear).wait(5450)
-								.to({ width: 59, height: 49, right: 20, bottom:25},450, createjs.Ease.quintOut)
-								.call(scene2)
-				}
-
-				function scene2(){
-						createjs.Tween.get(nome_drink, {loop: false})
-						.to({ bottom: -100 }, 0).wait(2000)
-						.to({ bottom: -5 },300, createjs.Ease.quintOut).wait(300)
-
-						createjs.Tween.get(boom_1, {loop: false})
-							.to({width: 0, height: 0, opacity:1}, 0)
-							.to({width: 150, height: 60, opacity:0}, 0).wait(5800)
-							.to({width: 178, height: 71, opacity:1, left:-15, top:-8}, 700, createjs.Ease.backOut).wait(2500)
-
-						createjs.Tween.get(frase_1, {loop: false})
-								.to({ left: -w*2 }, 0).wait(1800)
-								.to({ left: 5 },400, createjs.Ease.quintOut).wait(300)
-
-						createjs.Tween.get(frase_2, {loop: false})
-								.to({ left: -w*2 }).wait(1850)
-								.to({ left: 40 },350, createjs.Ease.quintOut).wait(600)
-
-						createjs.Tween.get(frase_3, {loop: false})
-								.to({ left: -w*2 }).wait(1800)
-								.to({ left: 10 },650, createjs.Ease.quintOut).wait(700)
-					
-
-					}
-						createjs.Tween.get(saibamais, {loop: false})
-							.to({opacity:0}).wait(15900)
-							.to({opacity:1}, 1300, createjs.Ease.Linear)
-			}
 			
-			
-		style.
-			#canvas{
-				position: relative;
-				width: 630px;
-				height: 120px;
-				margin: 0 auto;
-				background: #000;
-				overflow:hidden;
-			}
-			#canvas *{
-				transition: transform .2s ease-out;
-			}
-			#scene__1 {
-				width: 630px;
-				height: 120px;
-				position: absolute;
-				transition: transform .2s ease-out;
-				top: 0;
-				left: 0;
-			}
-			#scene__2{
-				width: 630px;
-				height: 120px;
-				position: absolute;
-				transition: transform .2s ease-out;
-				top: 0;
-				left: 0;
-			}
-			.drink{
-				position: absolute;
-				z-index:2;
-				bottom: 110px;
-			}
-			#nome_drink{
-				position: absolute;
-				z-index:3;
-				bottom: -100px;
-				left: 380px;
-			}
-			#bg_scene {
-				width: 630px;
-				height: 238px;
-				position: absolute;
-
-				top: 0;
-				left: 0;
-			}
-			#chamadas {
-				position: absolute;
-				top: 25px;
-				left: 15px;
-				z-index:1;
-			}
-			
-			#chamada__frase_1,#chamada__frase_2 {
-				position: absolute;
-				left: -320px;
-				top: 0px;
-			}
-			#chamada__frase_2 {
-				top: 35px;
-			}
-
-			#drink__infos {
-				position: absolute;
-				top: 20px;
-				left: 15px;
-				z-index:1;
-			}
-			#infos__frase_1,#infos__frase_2,#infos__frase_3 {
-				position: absolute;
-				left: -320px;
-			}
-			#infos__frase_2 {
-				top: 25px;
-			}
-			#boom {
-				position: absolute;
-				left: 20px;
-				top: 60px;
-				height: 100px;
-			}
-			#boom__item_1 {
-				position: relative;
-			}
-			a {
-				
-			}
-			#saibamais {
-				position: absolute;
-				bottom:0px;
-				right: 280px;
-			}
-			
-			#link_gpa {
-				position: absolute;
-				bottom:30px;
-				right: 35px;
-				width: 76px;
-				height:66px;
-			}
 	body(onload="init()")
-	
-		div#canvas.content
-			img#bg_scene(src=img_dir+'bg__scene.jpg')
-			div#scene__1
-				div#chamadas
-					img#chamada__frase_1(src=img_dir+'txt_tudooquevoceprecisapara.png')
-					br/
-					img#chamada__frase_2(src=img_dir+'txt_receberamigosemcasa.png')
-					
-			div#scene__2
-				img#nome_drink(src=img_dir+'nome_drink.png')
-				div#drink__infos
-					img#infos__frase_1(src=img_dir+'txt_agenteteensinaosdrinks.png')
-					br/
-					img#infos__frase_2(src=img_dir+'txt_eenviaosingredientes.png')
-				div#boom
-					img#boom__item_1(src=img_dir+'logo.png')
-
-			img#saibamais(src=img_dir+'cta_saibamais.png')
-			img#link_gpa(src=img_dir+'logo_gpa.png')
-			img#aprecie(src=img_dir+'txt_apreciecommoderacao.png')
+		a(id="clickArea", target="_blank",href="#")
+			#canvas
+				div(id=sc1)
+					img(id=bg,src=bg_scene)
+					div(id=chamadas)
+						img(id=c1,src=chamada_1)/
+						img(id=c2,src=chamada_2)/
+						img(id=c3,src=chamada_3)/
+						img(id=sh,src=shadow)/
+				div(id=sc2)
+					img(id=bg2,src=bg_scene2)
+				img(id=boo,src=logo_drinkstore)/
+				
+				img(id=cta,src=saibamais)
+				img(id=gpa,src=logo_gpa)
+				img(id=aprecie,src=legal)
+		
+		+script("banner.js")
+		script.
+			var clickArea = document.getElementById("clickArea");
+			clickArea.href = clickTAG;		
+				

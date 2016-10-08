@@ -1,227 +1,38 @@
-include assets/yahoo_300x250/_includes/var.pug
+include assets/_includes/yahoo_300x250/pug/var.pug
 
 doctype html
 html
 	head
 		block head
-			+link("example.css")
-			+link("tweenjs.css")
-			+link("style.css")
-			+script("examples.js")
 			+script("tweenjs-NEXT.min.js")
 			+script("CSSPlugin.js")
+			+link("style.css")
+			
 			//[if IE] <link href="/css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" /> [endif]
-		script#editable.
+				
 			
-				
-			function init() {
-				createjs.CSSPlugin.install(createjs.Tween);
-				var content1 = document.getElementById("scene__1");
-				var content2 = document.getElementById("scene__2");
-				var bg_scene = document.getElementById("bg_scene");
-				var nome_drink = document.getElementById("nome_drink");
-				var boom = document.getElementById("boom");
-				
-				var chamadas = document.getElementById("chamadas");
-				var chamada_1 = document.getElementById("chamada__frase_1");
-				var chamada_2 = document.getElementById("chamada__frase_2");
-				
-				var drink_infos = document.getElementById("drink__infos");
-				var frase_1 = document.getElementById("infos__frase_1");
-				var frase_2 = document.getElementById("infos__frase_2");
-				var frase_3 = document.getElementById("infos__frase_3");
-				
-				var boom = document.getElementById("boom");
-				var boom_1 = document.getElementById("boom__item_1");
-				
-				var gpa = document.getElementById("link_gpa");
-				var conheca = document.getElementById("conheca");
-				
-				var w=300;
-				var h=250;
-					//				document.body.appendChild(content1);
-				
-				content1.style.left = -w;
-				content2.style.opacity= 0;
-				content2.style.left = -w;
-				boom_1.style.opacity= 0;
-				entrachamada();
-				function entrachamada() { 
-					createjs.Tween.get(chamada_1, {loop: false})
-								.to({ left: -w }, 0).wait(1400)
-								.to({ left: 20 },400, createjs.Ease.quintOut).wait(300)
-								
-					createjs.Tween.get(chamada_2, {loop: false})
-								.to({ left: -w }).wait(1550)
-								.to({ left: 30 },350, createjs.Ease.quintOut).wait(1000)
-								.call(saichamada)
-				}
-				
-				function saichamada() { 
-					createjs.Tween.get(content1, {loop: false})
-								.to({ left: 0 }).wait(1600)
-								.to({ left: -w },750, createjs.Ease.quintOut).wait(1600)
-								.play(content_2)
-					
-					var content_2 = createjs.Tween.get(content2, {loop: false})
-								.to({ left: -w }).wait(2400)
-								.to({ opacity: 1,left: 0 },1050, createjs.Ease.quintOut)
-								
-						createjs.Tween.get(gpa, {loop: false})
-								.to({ width: 86, height: 74, right:105, bottom:14 },5, createjs.Ease.Linear).wait(2450)
-								.to({ width: 69, height: 59, right: 13, bottom:10},450, createjs.Ease.quintOut)
-								.call(scene2)
-				}
-				
-				function scene2(){
-						createjs.Tween.get(nome_drink, {loop: false})
-						.to({ left: -w/10 }, 0)
-						.to({ left: 0 },300, createjs.Ease.quintOut).wait(300)
-					createjs.Tween.get(boom_1, {loop: false})
-						.to({width: 0, height: 0, opacity:1}, 0)
-						.to({width: 100, height: 80, opacity:0}, 0).wait(2500)
-						.to({width: 165, height: 104, opacity:1, left:-30, top:-15}, 700, createjs.Ease.backOut).wait(2500)
-
-					createjs.Tween.get(frase_1, {loop: false})
-							.to({ left: -w*2 }, 0).wait(800)
-							.to({ left: 20 },400, createjs.Ease.quintOut).wait(300)
-
-					createjs.Tween.get(frase_2, {loop: false})
-							.to({ left: -w*2 }).wait(850)
-							.to({ left: 40 },350, createjs.Ease.quintOut).wait(600)
-
-					createjs.Tween.get(frase_3, {loop: false})
-							.to({ left: -w*2 }).wait(800)
-							.to({ left: 20 },650, createjs.Ease.quintOut).wait(700)
-
-
-					}	
-										
-			}
-			
-			
-		style.
-			#canvas{
-				position: relative;
-				width: 300px;
-				height: 250px;
-				margin: 0 auto;
-				background: #000;
-				overflow:hidden;
-			}
-			#canvas *{
-				transition: transform .2s ease-out;
-			}
-			#scene__1 {
-				width: 300px;
-				height: 250px;
-				position: absolute;
-				transition: transform .2s ease-out;
-				top: 0;
-				left: 0;
-			}
-			#scene__2{
-				width: 300px;
-				height: 250px;
-				position: absolute;
-				transition: transform .2s ease-out;
-				top: 0;
-				left: 0;
-			}
-			.drink{
-				position: absolute;
-				z-index:2;
-				bottom: 0; 
-			}
-			#nome_drink{
-				position: absolute;
-				z-index:3;
-				bottom: 0; 
-				left: -150px;
-			}
-			#bg_scene {
-				width: 300px;
-				height: 250px;
-				position: absolute;
-				
-				top: 0;
-				left: 0;
-			}
-			#chamadas {
-				position: absolute;
-				top: 35px;
-				left: 0px;
-				z-index:1;
-			}
-			
-			#chamada__frase_1,#chamada__frase_2 {
-				position: absolute;
-				left: -320px;
-			}
-			#chamada__frase_2 {
-				top: 58px;
-			}
-			
-			#drink__infos {
-				position: absolute;
-				top: 105px;
-				left: 120px;
-				z-index:1;
-			}
-			#infos__frase_1,#infos__frase_2,#infos__frase_3 {
-				position: absolute;
-				left: -320px;
-			}
-			#infos__frase_2 {
-				top: 17px;
-			}
-			#infos__frase_3 {
-				top: 42px;
-			}
-			#boom {
-				position: absolute;
-				left: 152px;
-				top: 14px;
-			}
-			#boom__item_1 {
-				position: relative;
-			}
-			#conheca {
-				position: absolute;
-				bottom:50px;
-				right: 0px;
-			}
-			#link_gpa {
-				position: absolute;
-				bottom:14px;
-				right: 105px;
-				width:86px;
-				height:74px;
-			}
-			#aprecie {
-				position: absolute;
-				bottom:0px;
-				right: 5px;
-				width:138px;
-				height:20px;
-			}
 	body(onload="init()")
-		div#canvas.content
-			div#bg_scene(style="background:url("+img_dir+"bg__scene.jpg); background-size: cover")
-			div#scene__1
-				div#chamadas
-					img#chamada__frase_1(src=img_dir+'txt_aproximafesta.png')
-					img#chamada__frase_2(src=img_dir+'txt_enasuacasa.png')
-					
-			div#scene__2
-				img#nome_drink(src=img_dir+'nome_drink.png')
-				img.drink(src=img_dir+'drink__whisky.png')
-				div#drink__infos
-					img#infos__frase_1(src=img_dir+'txt_aprendaosdrinks.png')
-					img#infos__frase_2(src=img_dir+'txt_ereceba.png')
-					img#infos__frase_3(src=img_dir+'txt_osingredientes.png')
-				div#boom
-					img#boom__item_1(src=img_dir+'logo.png')
+		a(id="clickArea", target="_blank",href="#")
+			#canvas
+				div(id=sc1)
+					img(id=bg,src=bg_scene)
+					div(id=chamadas)
+						img(id=c1,src=chamada_1)/
+						img(id=c2,src=chamada_2)/
+						img(id=c3,src=chamada_3)/
+				div(id=sc2)
+					img(id=bg2,src=bg_scene2)
+					div(id=infos)
+						img(id=i1,src=frase_1)/
+						img(id=i2,src=frase_2)/
+						img(id=i3,src=frase_3)/
+				img(id=boo,src=logo_drinkstore)/
 
-			img#link_gpa(src=img_dir+'logo_gpa.png')
-			img#aprecie(src=img_dir+'txt_apreciecommoderacao.png')
+				img(id=gpa,src=logo_gpa)
+				img(id=aprecie,src=legal)
+		
+		+script("banner.js")
+		script.
+			var clickArea = document.getElementById("clickArea");
+			clickArea.href = clickTAG;		
+				

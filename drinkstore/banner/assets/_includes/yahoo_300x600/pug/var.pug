@@ -1,0 +1,75 @@
+//- append vars
+-var resolution = '300x600'
+
+-var css_dir= "assets/yahoo_"+resolution+"/css/"
+-var img_dir= "assets/yahoo_"+resolution+"/images/"
+-var js_dir= "assets/yahoo_"+resolution+"/js/"
+
+
+
+
+//- bg
+-var bg_scene= img_dir+"bg__scene.jpg"
+-var bg_scene2= img_dir+"bg__scene2.jpg"
+//- content
+-var img_drink= img_dir+"drink__whisky.png"
+-var nome_drink= img_dir+"nome_drink.png"
+//- chamadas
+-var chamada_1= img_dir+"txt_"+"voceeo.png"
+-var chamada_2= img_dir+"txt_"+"bartender.png"
+-var chamada_3= img_dir+"txt_"+"dasuacasa.png"
+//- frases
+-var frase_1= img_dir+"txt_"+"receitaspraticas.png"
+-var frase_2= img_dir+"txt_"+"paravoce.png"
+-var frase_3= img_dir+"txt_"+"fazeremcasa.png"
+//- logos
+-var logo_drinkstore= img_dir+"logo.png"
+-var logo_gpa= img_dir+"logo_gpa.png"
+//- legais
+-var saibamais= img_dir+"cta_saibamais.png"
+-var legal= img_dir+"txt_"+"apreciecommoderacao.png"
+-var shadow= img_dir+"bg_shadow.png"
+
+
+//- ids
+
+-var canvas= "container"
+-var bg= "bg_scene"
+-var bg2= "bg_scene"
+-var sc1="scene__1"
+-var chamadas="chamadas"
+-var c1="chamada__frase_1"
+-var c2="chamada__frase_2"
+-var c3="chamada__frase_3"
+-var bg_chamadas="bg_chamadas"
+
+-var sc2="scene__2"
+-var infos="drink__infos"
+-var i1="infos__frase_1"
+-var i2="infos__frase_2"
+-var i3="infos__frase_3"
+
+-var nome = "nome_drink"
+-var boo="boom"
+
+
+-var gpa="link_gpa"
+-var cta="saibamais"
+-var aprecie="aprecie"
+-var sh="bg_shadow"
+
+
+
+
+append head
+	//- tag LINK
+	mixin link(nome)
+		-var link_attr = {href: css_dir+nome, media: "screen", rel: "stylesheet", type: "text/css"}
+		
+		link&attributes(link_attr)
+		
+	//- tag
+	mixin script(nome)
+		-var script_attr = {src: js_dir+nome, type: "text/javascript"}
+		
+		script&attributes(script_attr)

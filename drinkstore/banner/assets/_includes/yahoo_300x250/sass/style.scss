@@ -1,0 +1,105 @@
+	$w:300px;
+	$h:250px;
+	$bg_w:$w;
+	$bg_h:$h;
+	html,
+	body {
+		margin: 0;
+	}
+	
+	#clickTag {
+		position: relative;
+		width: $w;
+		height: $h;
+		margin: 0 auto;
+		background: #000;
+		overflow: hidden;
+		display: block;
+	}
+	
+	#canvas {
+		position: absolute;
+		width: $w;
+		height: $h;
+		margin: 0 auto;
+		padding: 0;
+		background: #000;
+		overflow: hidden;
+		* {
+			position: absolute;
+			transition: transform .2s ease-out;
+		}
+		#scene__1,
+		#scene__2 {
+			width: $w;
+			height: $h;
+			top: 0;
+			left: 0;
+		}
+		#scene__1 {
+			z-index: 2;
+			#bg_scene {
+				width: $bg_w;
+				height: $bg_h;
+			}
+			#chamadas {
+				top: 20px;
+				left: 0px;
+				z-index: 1;
+				#chamada__frase_1 {
+					z-index: 2;
+				}
+				#chamada__frase_2 {
+					top: 78px;
+					z-index: 2;
+				}
+				#chamada__frase_3 {
+					top: 18px;
+					z-index: 1;
+				}
+			}
+		}
+		#scene__2 {
+			z-index: 1;
+			#bg_scene2 {
+				width: $bg_w;
+				height: $bg_h;
+			}
+			#drink__infos {
+				top: 102px;
+				left: 32px;
+				z-index: 1;
+				#infos__frase_1,
+				#infos__frase_2,
+				#infos__frase_3 {
+					left: -420px;
+				}
+				#infos__frase_2 {
+					top: 26px;
+				}
+				#infos__frase_3 {
+					top: 53px;
+				}
+			}
+		}
+		#boom {
+			left: 106px;
+			top: -2px;
+			z-index: 3;
+		}
+		#saibamais {
+			bottom: -2px;
+			right: 85px;
+			z-index: 3;
+		}
+		#link_gpa {
+			bottom: 8px;
+			right: 14px;
+			z-index: 3;
+		}
+		#aprecie {
+			bottom: 10px;
+			left: 5px;
+			z-index: 3;
+		}
+	}
