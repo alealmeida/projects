@@ -1,0 +1,110 @@
+/* line 5, ../../_includes/yahoo_728x90/sass/style.scss */
+html,
+body {
+  margin: 0;
+}
+
+/* line 10, ../../_includes/yahoo_728x90/sass/style.scss */
+#clickTag {
+  position: relative;
+  width: 728px;
+  height: 90px;
+  margin: 0 auto;
+  background: #000;
+  overflow: hidden;
+  display: block;
+}
+
+/* line 20, ../../_includes/yahoo_728x90/sass/style.scss */
+#canvas {
+  position: absolute;
+  width: 728px;
+  height: 90px;
+  margin: 0 auto;
+  padding: 0;
+  background: #000;
+  overflow: hidden;
+}
+/* line 28, ../../_includes/yahoo_728x90/sass/style.scss */
+#canvas * {
+  position: absolute;
+  transition: transform .2s ease-out;
+}
+/* line 32, ../../_includes/yahoo_728x90/sass/style.scss */
+#canvas #scene__1,
+#canvas #scene__2 {
+  width: 728px;
+  height: 90px;
+  top: 0;
+  left: 0;
+}
+/* line 39, ../../_includes/yahoo_728x90/sass/style.scss */
+#canvas #scene__1 {
+  z-index: 2;
+}
+/* line 41, ../../_includes/yahoo_728x90/sass/style.scss */
+#canvas #scene__1 #bg_scene {
+  width: 728px;
+  height: 90px;
+}
+/* line 45, ../../_includes/yahoo_728x90/sass/style.scss */
+#canvas #scene__1 #chamadas {
+  top: 15px;
+  left: -5px;
+  z-index: 1;
+}
+/* line 49, ../../_includes/yahoo_728x90/sass/style.scss */
+#canvas #scene__1 #chamadas #chamada__frase_1 {
+  z-index: 2;
+}
+/* line 52, ../../_includes/yahoo_728x90/sass/style.scss */
+#canvas #scene__1 #chamadas #chamada__frase_2 {
+  z-index: 2;
+  top: 12px;
+}
+/* line 56, ../../_includes/yahoo_728x90/sass/style.scss */
+#canvas #scene__1 #chamadas #chamada__frase_3 {
+  z-index: 1;
+  top: 10px;
+}
+/* line 60, ../../_includes/yahoo_728x90/sass/style.scss */
+#canvas #scene__1 #chamadas #bg_shadow {
+  top: -40px;
+  z-index: 1;
+  opacity: 0;
+}
+/* line 67, ../../_includes/yahoo_728x90/sass/style.scss */
+#canvas #scene__2 {
+  z-index: 1;
+}
+/* line 69, ../../_includes/yahoo_728x90/sass/style.scss */
+#canvas #scene__2 #bg_scene2 {
+  width: 728px;
+  height: 90px;
+}
+/* line 74, ../../_includes/yahoo_728x90/sass/style.scss */
+#canvas #boom {
+  left: -3px;
+  top: -3px;
+  z-index: 3;
+  opacity: 0;
+}
+/* line 80, ../../_includes/yahoo_728x90/sass/style.scss */
+#canvas #saibamais {
+  bottom: 0px;
+  left: -285px;
+  z-index: 3;
+}
+/* line 85, ../../_includes/yahoo_728x90/sass/style.scss */
+#canvas #link_gpa {
+  bottom: 30px;
+  right: 14px;
+  z-index: 3;
+}
+/* line 90, ../../_includes/yahoo_728x90/sass/style.scss */
+#canvas #aprecie {
+  bottom: 7px;
+  right: 10px;
+  z-index: 3;
+  color: black;
+}

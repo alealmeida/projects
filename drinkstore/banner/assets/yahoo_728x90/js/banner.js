@@ -1,6 +1,6 @@
 var eff, id, from, to, time, wait;
-var w = 630,
-	h = 120;
+var w = 728,
+	h = 90;
 
 function getTween(id, from, to, time, wait, effect, wait2, call) {
 	var get = document.getElementById(id);
@@ -52,19 +52,18 @@ function init() {
 	var quintInOut = createjs.Ease.quintInOut;
 	var linear = createjs.Ease.Linear;
 	getTween(sc1_chamada1, -w, 18, 300, 1400, quintOut);
-	getTween(sc1_chamada2, -w, 142, 340, 1340, quintOut)
-	getTween(sc1_chamada3, -w, 335, 420, 1220, quintOut, 2000, saiChamadas);
+	getTween(sc1_chamada2, -w, 146, 340, 1340, quintOut)
+	getTween(sc1_chamada3, -w, 345, 420, 1220, quintOut, 2000, saiChamadas);
 
 	function saiChamadas() {
 		getTween(sc1_chamada1, 18, -w, 320, 1330, quintIn);
-		getTween(sc1_chamada2, 142, -w, 420, 1420, quintIn, 300, saiCena1);
-		getTween(sc1_chamada3, 335, -w, 320, 1420, quintIn, 1200, chegou);
-		getTween(aprecie, 10, 482, 1220, 1020, quintInOut);
+		getTween(sc1_chamada2, 146, -w, 420, 1420, quintIn, 300, saiCena1);
+		getTween(sc1_chamada3, 345, -w, 320, 1420, quintIn, 1200, chegou);
 	}
 
 	function saiCena1() {
 		getOpacity(bg_scene, 1, 0, 1000, 120, linear);
-		getTween(saibamais, -w, 206, 1280, 800, quintOut);
+		getTween(saibamais, -w, 230, 1280, 800, quintOut);
 	}
 
 	function chegou() {

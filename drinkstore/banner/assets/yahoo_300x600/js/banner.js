@@ -61,12 +61,12 @@ function init() {
 	function saiChamadas() {
 		getTween(sc1_chamada1, 30, -w, 320, 1330, quintIn);
 		getTween(sc1_chamada2, 27, -w, 420, 1420, quintIn);
-		getTween(sc1_chamada3, 25, -w, 320, 1420, quintIn);
+		getTween(sc1_chamada3, 25, -w, 320, 1420, quintIn, 2500, chegou);
 		getOpacity(bg_shadow, .55, 0, 520, 1520, linear);
 	}
 
 	function saiCena1() {
-		getTween(bg_scene, 0, -236, 7320, 120, quintInOut, 400, chegou);
+		getTween(bg_scene, 0, -236, 7320, 120, quintInOut);
 	}
 
 	function entraInfos() {
@@ -77,6 +77,6 @@ function init() {
 	}
 
 	function chegou() {
-		getOpacity(boom, 0, 1, 520, 420, linear, 500, entraInfos);
+		getOpacity(boom, 0, 1, 520, 220, linear, 500, entraInfos);
 	}
 }
