@@ -1,5 +1,6 @@
-	$w:630px;
-	$h:120px;
+	$w:320px;
+	$h:50px;
+	$h2:480px;
 	$bg_w:$w;
 	$bg_h:$h;
 	html,
@@ -7,14 +8,16 @@
 		margin: 0;
 	}
 	
-	#clickTag {
-		position: relative;
+	#clickArea {
+		position: absolute;
 		width: $w;
 		height: $h;
 		margin: 0 auto;
 		background: #000;
-		overflow: hidden;
-		display: block;
+	}
+	
+	#canvas:hover {
+		height: $h2 !important;
 	}
 	
 	#canvas {
@@ -25,6 +28,8 @@
 		padding: 0;
 		background: #000;
 		overflow: hidden;
+		transition: height 0.5s;
+		-webkit-transition: height 0.5s;
 		* {
 			position: absolute;
 			transition: transform .2s ease-out;
@@ -40,57 +45,75 @@
 			z-index: 2;
 			#bg_scene {
 				width: $bg_w;
-				height: $bg_h;
+				height: $h2;
 			}
 			#chamadas {
-				top: 24px;
-				left: -5px;
+				top: 10px;
+				left: 0px;
 				z-index: 1;
 				#chamada__frase_1 {
 					z-index: 2;
 				}
 				#chamada__frase_2 {
 					z-index: 2;
-					top: 12px;
+					top: 4px;
 				}
 				#chamada__frase_3 {
 					z-index: 1;
-					top: 10px;
+					top: 5px;
 				}
 				#bg_shadow {
-					top: -40px;
+					top: 0px;
 					z-index: 1;
 					opacity: 0;
 				}
 			}
-		}
-		#scene__2 {
 			z-index: 1;
-			#bg_scene2 {
-				width: $bg_w;
-				height: $bg_h;
+			#drink__infos {
+				top: 226px;
+				left: 0px;
+				z-index: 1;
+				#infos__frase_1,
+				#infos__frase_2,
+				#infos__frase_3 {
+					left: -$w;
+				}
+				#infos__frase_2 {
+					top: 28px;
+				}
+				#infos__frase_3 {
+					top: 60px;
+				}
 			}
 		}
 		#boom {
-			left: -3px;
-			top: 3px;
+			left: 50px;
+			top: 70px;
 			z-index: 3;
 			opacity: 0;
 		}
 		#saibamais {
-			bottom: 0px;
-			left: -285px;
+			left: -320px;
+			top: 326px;
 			z-index: 3;
+		}
+		#canvas::hover #link_gpa {
+			width: 64px;
+			height: 57px;
+			bottom: 26px;
+			right: 98px;
 		}
 		#link_gpa {
-			bottom: 36px;
-			right: 14px;
+			bottom: 16px;
+			right: 8px;
 			z-index: 3;
+			width: 30px;
+			height: 27px;
 		}
 		#aprecie {
-			bottom: 7px;
-			left: 10px;
+			bottom: 0px;
+			right: 0px;
 			z-index: 3;
-			color: black;
+			color: blue;
 		}
 	}

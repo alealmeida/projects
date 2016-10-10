@@ -1,25 +1,43 @@
-var w = 630
-	, h = 120;
+var w = 320
+	, h = 50;
 var quintIn = createjs.Ease.quintIn;
 var quintOut = createjs.Ease.quintOut;
 var quintInOut = createjs.Ease.quintInOut;
 var linear = createjs.Ease.Linear;
 var chamada_1 = {
-	valores: [-w, 15]
+	valores: [-w, 10]
 	, tempos: [0, 600, 0, 1000]
-	, esperas: [1300, 0, 1330, 10]
+	, esperas: [1300, 0, 0, 0]
 	, effect: quintOut
 };
 var chamada_2 = {
-	valores: [-w, 142]
+	valores: [-w, 68]
 	, tempos: [0, 500, 0, 1000]
-	, esperas: [1440, 0, 1420, 1200]
+	, esperas: [1440, 0, 0, 0]
 	, effect: quintOut
 };
 var chamada_3 = {
-	valores: [-w, 335]
+	valores: [-w, 172]
 	, tempos: [0, 420, 0, 1000]
-	, esperas: [1420, 2000, 1420, 400]
+	, esperas: [1420, 1000, 0, 0]
+	, effect: quintOut
+};
+var frase_1 = {
+	valores: [-w, 122]
+	, tempos: [0, 600, 0, 1000]
+	, esperas: [1300, 0, 0, 0]
+	, effect: quintOut
+};
+var frase_2 = {
+	valores: [-w, 123]
+	, tempos: [0, 500, 0, 1000]
+	, esperas: [1440, 0, 0, 0]
+	, effect: quintOut
+};
+var frase_3 = {
+	valores: [-w, 122]
+	, tempos: [0, 420, 0, 1000]
+	, esperas: [1420, 2000, 0, 0]
 	, effect: quintOut
 };
 var sc1_aprecie = {
@@ -41,7 +59,7 @@ var boom_store = {
 	, effect: linear
 };
 var saiba = {
-	valores: [-w, 210]
+	valores: [-w, 100]
 	, tempos: [0, 780]
 	, esperas: [0, 0]
 	, effect: quintOut
@@ -129,6 +147,9 @@ function init() {
 	var sc1_chamada1 = "chamada__frase_1";
 	var sc1_chamada2 = "chamada__frase_2";
 	var sc1_chamada3 = "chamada__frase_3";
+	var sc2_info1 = "infos__frase_1";
+	var sc2_info2 = "infos__frase_2";
+	var sc2_info3 = "infos__frase_3";
 	var bg_scene = "bg_scene";
 	var bg_shadow = "bg_shadow";
 	var boom = "boom";
@@ -141,22 +162,20 @@ function init() {
 	function inicio() {
 		acao('move_x', sc1_chamada1, 'ida', chamada_1);
 		acao('move_x', sc1_chamada2, 'ida', chamada_2);
-		acao('move_x', sc1_chamada3, 'ida', chamada_3, saiChamadas);
+		acao('move_x', sc1_chamada3, 'ida', chamada_3, chegou);
 	}
 
-	function saiChamadas() {
-		acao('move_x', sc1_chamada1, 'volta', chamada_1);
-		acao('move_x', sc1_chamada2, 'volta', chamada_2);
-		acao('move_x', sc1_chamada3, 'volta', chamada_3, saiCenaUm);
-		acao('move_x', aprecie, 'ida', sc1_aprecie);
-	}
-
-	function saiCenaUm() {
-		acao('opacidade', bg_scene, 'ida', bg_cena_1, chegou);
+	function entraCena2() {
+		acao('move_x', sc2_info1, 'ida', frase_1);
+		acao('move_x', sc2_info2, 'ida', frase_2);
+		acao('move_x', sc2_info3, 'ida', frase_3, saiba_mais);
 	}
 
 	function chegou() {
-		acao('opacidade', boom, 'ida', boom_store);
+		acao('opacidade', boom, 'ida', boom_store, entraCena2);
+	}
+
+	function saiba_mais() {
 		acao('move_x', saibamais, 'ida', saiba);
 	}
 }
