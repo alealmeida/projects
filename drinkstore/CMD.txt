@@ -24,6 +24,7 @@ compass watch --sass-dir /Users/aalmeida/Documents/2-workspace/projects/drinksto
 pug -w -P yahoo_480x320.pug yahoo_300x250.pug yahoo_300x600.pug yahoo_425x600.pug yahoo_480x320.pug yahoo_630x120.pug
 
 
+<<<<<<< Updated upstream
 //
 
 compass watch --sass-dir /Users/aalmeida/Documents/2-workspace/projects/drinkstore/banner/assets/_includes/yahoo_160x600/sass --css-dir /Users/aalmeida/Documents/2-workspace/projects/drinkstore/banner/assets/yahoo_160x600/css
@@ -54,3 +55,8 @@ pug -w -P yahoo_480x320.pug yahoo_300x250.pug yahoo_300x600.pug yahoo_425x600.pu
 
 
 
+=======
+
+	transition: height 0.5s;
+	-webkit-transition: height 0.5s;
+>>>>>>> Stashed changes

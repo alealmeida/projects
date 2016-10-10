@@ -25,6 +25,9 @@
 		padding: 0;
 		background: #000;
 		overflow: hidden;
+		:hover {
+			height: 800px;
+		}
 		* {
 			position: absolute;
 			transition: transform .2s ease-out;
