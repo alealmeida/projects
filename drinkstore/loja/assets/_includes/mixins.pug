@@ -7,68 +7,107 @@ append head
 		- link_attr.rel= "stylesheet"
 		- link_attr.type= "text/css"
 		link&attributes(link_attr)
+	mixin script(nome)
+		-var scr_attr = {}
+		- scr_attr.href= js_dir+nome
+		- scr_attr.media= "screen"
+		- scr_attr.rel= "stylesheet"
+		- scr_attr.type= "text/css"
+		link&attributes(link_attr)
+		
+	//	mixin content(tag, n)
+		
+			-var tags = tag
+			-var item = n
+			-var attr = {}
+			-var texto ={}
+			case item
+				when 1
+					-texto.h3= "Churrasco"
+					-texto.h4= "Drinks para acompanhar o seu"
+					-texto.p= "Combinações tradicionais para seu Churrasco"
+					-texto.h5= "Caipirinha de Limão"
+				when 2
+					-car= "www1.paodeacucar.com.br"
+					-plus= "receber-em-casa.html#gin-tonica"
+					-texto.h3 = "Esquenta"
+					-texto.h4 = "Drinks fáceis para o seu"
+					-texto.p = "Confira os drinks para o seu esquenta ficar ainda melhor!"
+					-texto.h5 = "Red Citrus"
+					-attr.class = "conheca"
+					-attr.href = "churrasco.html"
+				when 3
+					-car= "www1.paodeacucar.com.br"
+					-plus= "churrasco.html#caipirinha-limao"
+					-texto.h3 = "Receber em casa"
+					-texto.h4 = "Drinks perfeitos para"
+					-texto.p = "Reunir os amigos em casa fica ainda melhor com uma seleção especial de drinks"
+					-texto.h5 = "Gin Tônica"
+					-attr.class = "conheca"
+					-attr.href = "churrasco.html"
+				when 4
+					-mais_drinks= "ofertas.html"
+					-car= "www1.paodeacucar.com.br"
+					-plus= "ofertas.html#combo1"
 
-	append section
-		mixin content(tag, n)
-				
-				each tags, id in {n:tag}
-					-var tags = tag
-					-var item = n
-					
-					
-					-var texto ={}
-					case item
-						when 1
-							-texto.h3= "Churrasco"
-							-texto.h4= "Drinks para acompanhar o seu"
-							-texto.p= "Combinações tradicionais para seu Churrasco"
-							-texto.h5= "Caipirinha de Limão"
-							-var attrib = {class:'conheca', haref:'churrasco.html'}
-						when 2
-							-car= "www1.paodeacucar.com.br"
-							-plus= "receber-em-casa.html#gin-tonica"
-							-texto.h3 = "Esquenta"
-							-texto.h4 = "Drinks fáceis para o seu"
-							-texto.p = "Confira os drinks para o seu esquenta ficar ainda melhor!"
-							-texto.h5 = "Red Citrus"
-							-attrib.class = "conheca"
-							-attrib.href = "churrasco.html"
-						when 3
-							-car= "www1.paodeacucar.com.br"
-							-plus= "churrasco.html#caipirinha-limao"
-							-texto.h3 = "Receber em casa"
-							-texto.h4 = "Drinks perfeitos para"
-							-texto.p = "Reunir os amigos em casa fica ainda melhor com uma seleção especial de drinks"
-							-texto.h5 = "Gin Tônica"
-							-attrib.class = "conheca"
-							-attrib.href = "churrasco.html"
-						when 4
-							-mais_drinks= "ofertas.html"
-							-car= "www1.paodeacucar.com.br"
-							-plus= "ofertas.html#combo1"		
-					
-					#{tags}= (texto[tag])
-					
-					a&attributes(attrib)
-			
-				
-					
-		append inside_row
+		
+	append content
+		-for(n=1;n<=3;n++)
+			mixin content(tag, n)
+				-var item=tag
+				-var index = n
+				-var texto ={}
+				-var anchor ={}
+				case index
+					when 1
+						-texto.h3= "Drinks para acompanhar o seu"
+						-texto.h2= "Churrasco"
+						-texto.p= "Combinações fáceis para o seu churrasco ser completo."
+						-anchor.href= "http://busca.paodeacucar.com/ppc/drinkstore_churrasco"
+						-texto.a="Clique para ver mais receitas"
+						-texto.h5= "Caipirinha de Limão"
+					when 2
+						-texto.h4 = "Drinks fáceis para o seu"
+						-texto.p = "Confira os drinks para o seu esquenta ficar ainda melhor!"
+						-texto.h5 = "Red Citrus"
+					when 3
+						-texto.h3 = "Receber em casa"
+						-texto.h5 = "Gin Tônica"
+						-texto.h4 = "Drinks perfeitos para"
+						-texto.p = "Reunir os amigos em casa fica ainda melhor com uma seleção especial de drinks"
+				#{item}= (texto[item])
 			mixin article
 				article.content
 					header
-						+content('h4', n)
-							figure
 						+content('h3', n)
+							figure
+						+content('h2', n)
 					+content('p', n)
 					block area
-						a&attributes(attrib)	
-						
-			mixin aside(float)
+						+content('a', n)
+			mixin aside
 				aside.drink(class=float)
 					header
 						+content('h5', n)
-						+content('a', n)
 						a.icon.plus(href=plus)
-						
-						
+					
+			mixin estrutura(n)
+				-var hash={}
+				-var index = n
+				case index
+					when 1
+						-hash.id= "churrasco"
+					when 2
+						-hash.id= "esquenta"
+					when 3
+						-hash.id= "receber-em-casa"
+				
+				if n==1 || n==3
+					section.drinks&attributes(hash)
+						+article
+						+aside
+				else
+					section.drinks&attributes(hash)
+						+aside
+						+article
+				

@@ -1,0 +1,46 @@
+a.drink-more {
+    color: $yellow;
+    font-size: 16px;
+    display: block;
+    padding: 0 15px 0 38px;
+    position: relative;
+    text-transform: uppercase;
+
+    &::before {
+        content: "";
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        left: 15px;
+        top: 55%;
+        border-top: 2px solid $yellow;
+        border-right: 2px solid $yellow;
+        transform: translateY(-50%) rotate(45deg);
+    }
+}
+
+a.drink-buy {
+    color: transparent;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 16vw;
+    height: 2.5vw;
+    font-size: 1.1vmax;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    font-family: Tahoma;
+    position: relative;
+
+    &::before {
+        content: "";
+        background-image: url('../images/icons/botao-comprar.png');
+        background-size: auto 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: block;
+        height: 100%;
+        position: absolute;
+        width: 100%;
+    }
+}

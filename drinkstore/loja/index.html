@@ -1,98 +1,94 @@
-<!DOCTYPE html>
+
+<!--	mixin content(tag, n)
+-var tags = tag
+-var item = n
+-var attr = {}
+-var texto ={}
+case item
+	when 1
+		-texto.h3= "Churrasco"
+		-texto.h4= "Drinks para acompanhar o seu"
+		-texto.p= "Combinações tradicionais para seu Churrasco"
+		-texto.h5= "Caipirinha de Limão"
+	when 2
+		-car= "www1.paodeacucar.com.br"
+		-plus= "receber-em-casa.html#gin-tonica"
+		-texto.h3 = "Esquenta"
+		-texto.h4 = "Drinks fáceis para o seu"
+		-texto.p = "Confira os drinks para o seu esquenta ficar ainda melhor!"
+		-texto.h5 = "Red Citrus"
+		-attr.class = "conheca"
+		-attr.href = "churrasco.html"
+	when 3
+		-car= "www1.paodeacucar.com.br"
+		-plus= "churrasco.html#caipirinha-limao"
+		-texto.h3 = "Receber em casa"
+		-texto.h4 = "Drinks perfeitos para"
+		-texto.p = "Reunir os amigos em casa fica ainda melhor com uma seleção especial de drinks"
+		-texto.h5 = "Gin Tônica"
+		-attr.class = "conheca"
+		-attr.href = "churrasco.html"
+	when 4
+		-mais_drinks= "ofertas.html"
+		-car= "www1.paodeacucar.com.br"
+		-plus= "ofertas.html#combo1"
+
+
+--><!DOCTYPE html>
 <html>
   <head>
-    <link href="/assets/css/screen.css" media="screen" rel="stylesheet" type="text/css"/>
-    <link href="/assets/css/styles.css" media="screen" rel="stylesheet" type="text/css"/>
-    <link href="/assets/css/style.css" media="screen" rel="stylesheet" type="text/css"/>
+    <link href="css/style.css" media="screen" rel="stylesheet" type="text/css"/>
     <!--[if IE] <link href="/css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" /> [endif]-->
   </head>
   <body>
-    <div class="drinkstore"></div>
-    <header class="container-fluid background parallax" id="hero">
-      <!--  CATEGORIA: CHURRASCO 
-      
-      -->
-      <section class="category container-fluid background parallax" id="cat-1">
-        <figure class="effect"><img src="/images/1__bg-base.png"/></figure>
-        <div class="row">
-          <article class="content">
-            <header>
-              <h4>Drinks para acompanhar o seu</h4>
-              <h3>Churrasco</h3>
-            </header>
-            <p>Combinações tradicionais para seu Churrasco</p>
-          </article>
-          <aside class="drink right">
-            <header>
-              <h5>Caipirinha de Limão</h5>
-              <a></a><a class="icon plus"></a>
-            </header>
-          </aside>
-        </div>
+    <div class="drinkstore">
+      <header class="drinks" id="hero"></header>
+      <section class="drinks" id="churrasco">
+        <article class="content">
+          <header>
+            <h3>Drinks para acompanhar o seu</h3>
+            <h2>Churrasco</h2>
+          </header>
+          <p>Combinações fáceis para o seu churrasco ser completo.</p>
+          <a>Clique para ver mais receitas</a>
+        </article>
+        <aside class="drink">
+          <header>
+            <h5>Caipirinha de Limão</h5><a class="icon plus"></a>
+          </header>
+        </aside>
       </section>
-      <!--  CATEGORIA: ESQUENTA 
-      
-      -->
-      <section class="category container-fluid background parallax" id="cat-2">
-        <figure class="effect"><img src="/images/2__bg-base.png"/></figure>
-        <div class="row">
-          <aside class="drink left">
-            <header>
-              <h5>Red Citrus</h5>
-              <a></a><a class="icon plus" href="receber-em-casa.html#gin-tonica"></a>
-            </header>
-          </aside>
-          <article class="content">
-            <header>
-              <h4>Drinks fáceis para o seu</h4>
-              <h3>Esquenta</h3>
-            </header>
-            <p>Confira os drinks para o seu esquenta ficar ainda melhor!</p>
-          </article>
-        </div>
+      <section class="drinks" id="esquenta">
+        <aside class="drink">
+          <header>
+            <h5>Red Citrus</h5><a class="icon plus"></a>
+          </header>
+        </aside>
+        <article class="content">
+          <header>
+            <h3></h3>
+            <h2></h2>
+          </header>
+          <p>Confira os drinks para o seu esquenta ficar ainda melhor!</p>
+          <a></a>
+        </article>
       </section>
-      <!--  CATEGORIA: RECEBER EM CASA 
-      
-      -->
-      <section class="category container-fluid background parallax" id="cat-3">
-        <figure class="effect"><img src="/images/3__bg-base.png"/></figure>
-        <div class="row">
-          <article class="content">
-            <header>
-              <h4>Drinks perfeitos para</h4>
-              <h3>Receber em casa</h3>
-            </header>
-            <p>Reunir os amigos em casa fica ainda melhor com uma seleção especial de drinks</p>
-          </article>
-          <aside class="drink right">
-            <header>
-              <h5>Gin Tônica</h5>
-              <a></a><a class="icon plus" href="churrasco.html#caipirinha-limao"></a>
-            </header>
-          </aside>
-        </div>
+      <section class="drinks" id="receber-em-casa">
+        <article class="content">
+          <header>
+            <h3>Receber em casa</h3>
+            <h2></h2>
+          </header>
+          <p>Reunir os amigos em casa fica ainda melhor com uma seleção especial de drinks</p>
+          <a></a>
+        </article>
+        <aside class="drink">
+          <header>
+            <h5>Gin Tônica</h5><a class="icon plus"></a>
+          </header>
+        </aside>
       </section>
-      <!--  
-      
-      -->
-      <section class="category container-fluid background parallax" id="cat-4">
-        <figure class="effect"><img src="/images/4__bg-base.png"/></figure>
-        <div class="row">
-          <aside class="drink left">
-            <header>
-              <h5></h5>
-              <a></a><a class="icon plus" href="ofertas.html#combo1"></a>
-            </header>
-          </aside>
-          <article class="content">
-            <header>
-              <h4></h4>
-              <h3></h3>
-            </header>
-            <p></p>
-          </article>
-        </div>
-      </section>
-    </header>
+    </div>
+    <link/>
   </body>
 </html>
