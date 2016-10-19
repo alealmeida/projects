@@ -1,0 +1,17 @@
+include assets/_includes/mixins.pug
+include assets/_includes/var.pug
+
+block vars
+doctype html
+html
+	head
+		block head
+			+link("style.css")
+			//[if IE] <link href="/css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" /> [endif]
+	body
+		.drinkstore
+			header(id="hero")&attributes(parallax)
+			block content
+				-for(n=1;n<=3;n++)
+					+estrutura(n)
+		+script("drinkstore.js")
