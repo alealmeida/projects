@@ -1,0 +1,75 @@
+//variables
+
+-var reset = {}
+- reset.leftmargin = 0
+- reset.topmargin = 0
+- reset.marginwidth = 0
+- reset.marginheight = 0
+
+
+-var medidas = {}
+- medidas.width = 600
+- medidas.cellpadding = 0
+- medidas.cellspacing = 0
+- medidas.border = 0
+- medidas.bgcolor = "#ffffff"
+
+
+//mixin
+mixin img(q, ...attrs)
+	-var total = q
+	if q<=1
+		each i in attrs
+			-var infos = {}
+			- infos.width = i[1]
+			- infos.height = i[2]
+			- infos.src = "images/img_"+i[0]+".png"
+			- infos.alt = i[3]
+			- infos.title = i[3]
+			- infos.style = "display: block;"
+			- infos.border = 0
+			tr
+				td(width=600)
+					img&attributes( infos )
+	else
+		tr
+			td(width=600)
+				table&attributes( medidas )
+					tr
+						each i in attrs
+							-var infos = {}
+							- infos.width = i[1]
+							- infos.height = i[2]
+							- infos.src = "images/img_"+i[0]+".png"
+							- infos.alt = i[3]
+							- infos.title = i[3]
+							- infos.style = "display:block"
+							- infos.border = 0
+								td
+									img&attributes( infos )
+
+
+//CODE	
+html
+	head
+		title
+		meta
+	body&attributes( reset )
+		table(height=1152)&attributes( medidas )
+			+img(1,[ 1, medidas.width, 100, "Promoção Desafio Torradas - Bauducco" ])
+			+img(1,[ 2, medidas.width, 205, "" ])
+			+img(1,[ 3, medidas.width, 232, "Ainda não se cadastrou no desafio? Não perca tempo!" ])
+			+img(1,[ 4, medidas.width, 180, "" ])
+			+img(2,[ 5 , 300, 188 , "" ],
+							[ 6 , 300 , 188 , "" ])
+			+img(3,[ 7 , 111, 66 , "" ],
+							[ 8 , 374 , 66 , "CLIQUE AQUI",'www.desafiotorradas.com.br' ],
+							[ 9 , 115 , 66 , "Promoção Desafio Torradas - Bauducco" ])
+			+img(1,[ 10, medidas.width, 100, "" ])
+			+img(1,[ 11, medidas.width, 86, "" ])
+			
+			
+			
+			
+			
+			
