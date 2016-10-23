@@ -1,0 +1,96 @@
+	$w:630px;
+	$h:120px;
+	$bg_w:$w;
+	$bg_h:$h;
+	html,
+	body {
+		margin: 0;
+	}
+	
+	#clickTag {
+		position: relative;
+		width: $w;
+		height: $h;
+		margin: 0 auto;
+		background: #000;
+		overflow: hidden;
+		display: block;
+	}
+	
+	#canvas {
+		position: absolute;
+		width: $w;
+		height: $h;
+		margin: 0 auto;
+		padding: 0;
+		background: #000;
+		overflow: hidden;
+		* {
+			position: absolute;
+			transition: transform .2s ease-out;
+		}
+		#scene__1,
+		#scene__2 {
+			width: $w;
+			height: $h;
+			top: 0;
+			left: 0;
+		}
+		#scene__1 {
+			z-index: 2;
+			#bg_scene {
+				width: $bg_w;
+				height: $bg_h;
+			}
+			#chamadas {
+				top: 24px;
+				left: -5px;
+				z-index: 1;
+				#chamada__frase_1 {
+					z-index: 2;
+				}
+				#chamada__frase_2 {
+					z-index: 2;
+					top: 12px;
+				}
+				#chamada__frase_3 {
+					z-index: 1;
+					top: 10px;
+				}
+				#bg_shadow {
+					top: -40px;
+					z-index: 1;
+					opacity: 0;
+				}
+			}
+		}
+		#scene__2 {
+			z-index: 1;
+			#bg_scene2 {
+				width: $bg_w;
+				height: $bg_h;
+			}
+		}
+		#boom {
+			left: -3px;
+			top: 3px;
+			z-index: 3;
+			opacity: 0;
+		}
+		#saibamais {
+			bottom: 0px;
+			left: -285px;
+			z-index: 3;
+		}
+		#link_gpa {
+			bottom: 36px;
+			right: 14px;
+			z-index: 3;
+		}
+		#aprecie {
+			bottom: 7px;
+			left: 10px;
+			z-index: 3;
+			color: black;
+		}
+	}

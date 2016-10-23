@@ -1,0 +1,126 @@
+/* line 5, ../../_includes/yahoo_300x600/sass/style.scss */
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 11, ../../_includes/yahoo_300x600/sass/style.scss */
+#clickTag {
+  position: relative;
+  width: 300px;
+  height: 600px;
+  margin: 0 auto;
+  background: #000;
+  overflow: hidden;
+  display: inline-flex;
+  justify-content: center;
+}
+
+/* line 22, ../../_includes/yahoo_300x600/sass/style.scss */
+#canvas {
+  position: absolute;
+  width: 300px;
+  height: 600px;
+  margin: 0 auto;
+  padding: 0;
+  background: #000;
+  overflow: hidden;
+}
+/* line 30, ../../_includes/yahoo_300x600/sass/style.scss */
+#canvas * {
+  position: absolute;
+  transition: transform .2s ease-out;
+}
+/* line 34, ../../_includes/yahoo_300x600/sass/style.scss */
+#canvas #scene__1,
+#canvas #scene__2 {
+  width: 300px;
+  height: 600px;
+  top: 0;
+  left: 0;
+}
+/* line 41, ../../_includes/yahoo_300x600/sass/style.scss */
+#canvas #bg_scene {
+  width: 536px;
+  height: 600px;
+}
+/* line 45, ../../_includes/yahoo_300x600/sass/style.scss */
+#canvas #scene__1 {
+  z-index: 1;
+}
+/* line 47, ../../_includes/yahoo_300x600/sass/style.scss */
+#canvas #scene__1 #chamadas {
+  top: 90px;
+  left: 0px;
+}
+/* line 50, ../../_includes/yahoo_300x600/sass/style.scss */
+#canvas #scene__1 #chamadas #chamada__frase_1 {
+  z-index: 2;
+}
+/* line 53, ../../_includes/yahoo_300x600/sass/style.scss */
+#canvas #scene__1 #chamadas #chamada__frase_2 {
+  top: 83px;
+  z-index: 2;
+}
+/* line 57, ../../_includes/yahoo_300x600/sass/style.scss */
+#canvas #scene__1 #chamadas #chamada__frase_3 {
+  top: 135px;
+  z-index: 2;
+}
+/* line 61, ../../_includes/yahoo_300x600/sass/style.scss */
+#canvas #scene__1 #chamadas #bg_shadow {
+  top: -45px;
+  z-index: 1;
+  opacity: 0;
+}
+/* line 68, ../../_includes/yahoo_300x600/sass/style.scss */
+#canvas #scene__2 {
+  z-index: 2;
+}
+/* line 70, ../../_includes/yahoo_300x600/sass/style.scss */
+#canvas #scene__2 #drink__infos {
+  top: 130px;
+  left: 0px;
+  z-index: 2;
+}
+/* line 74, ../../_includes/yahoo_300x600/sass/style.scss */
+#canvas #scene__2 #drink__infos #infos__frase_1,
+#canvas #scene__2 #drink__infos #infos__frase_2,
+#canvas #scene__2 #drink__infos #infos__frase_3 {
+  left: -420px;
+}
+/* line 79, ../../_includes/yahoo_300x600/sass/style.scss */
+#canvas #scene__2 #drink__infos #infos__frase_2 {
+  top: 33px;
+  z-index: 2;
+}
+/* line 83, ../../_includes/yahoo_300x600/sass/style.scss */
+#canvas #scene__2 #drink__infos #infos__frase_3 {
+  top: 68px;
+}
+/* line 88, ../../_includes/yahoo_300x600/sass/style.scss */
+#canvas #boom {
+  left: 13px;
+  top: 0px;
+  z-index: 3;
+  opacity: 0;
+}
+/* line 94, ../../_includes/yahoo_300x600/sass/style.scss */
+#canvas #saibamais {
+  bottom: 28px;
+  left: -321px;
+  z-index: 4;
+}
+/* line 99, ../../_includes/yahoo_300x600/sass/style.scss */
+#canvas #link_gpa {
+  bottom: 0px;
+  right: 0px;
+  z-index: 3;
+}
+/* line 104, ../../_includes/yahoo_300x600/sass/style.scss */
+#canvas #aprecie {
+  bottom: 15px;
+  left: 10px;
+  z-index: 3;
+}

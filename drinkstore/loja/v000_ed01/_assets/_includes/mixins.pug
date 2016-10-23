@@ -1,0 +1,177 @@
+append head
+	mixin link(nome)
+		//-	tag link
+		-var link_attr = {}
+		- link_attr.href= css_dir+nome
+		- link_attr.media= "screen"
+		- link_attr.rel= "stylesheet"
+		- link_attr.type= "text/css"
+		link&attributes(link_attr)
+	mixin script(nome)
+		//-	tag script
+		-var scr_attr = {}
+		- scr_attr.src= js_dir+nome
+		- scr_attr.type= "text/javascript"
+		script&attributes(scr_attr)
+		
+mixin header
+	-var video_attr={}
+	-var source_attr={}
+	-video_attr.class="bg_video"
+	-video_attr.autoplay="autoplay"
+	-video_attr.loop="loop"
+	-video_attr.poster=img_dir+"header.jpg"
+	-source_attr.type="video/mp4"
+	-source_attr.src=media_dir+"header.mp4"
+	
+	video&attributes(video_attr)
+		source&attributes(source_attr)
+mixin menu(i)
+	-var li_attr={}
+	-var a_attr={}
+	-var index=i
+	case index
+		when 1
+			-li_attr.class="receitas-praticas"
+			-a_attr.href="#"
+		when 2
+			-li_attr.class="home"
+			-a_attr.href="#home"
+			-a_text="Home"
+		when 3
+			-li_attr.class="churrasco"
+			-a_attr.href="#churrasco"
+			-a_text="Churrasco"
+		when 4
+			-li_attr.class="esquenta"
+			-a_attr.href="#esquenta"
+			-a_text="Esquenta"
+		when 5
+			-li_attr.class="receber-em-casa"
+			-a_attr.href="#receber-em-casa"
+			-a_text="Receber em casa"
+	li&attributes(li_attr)
+		a&attributes(a_attr)= a_text
+		
+mixin content(item, type, n)
+	-var tag=item
+	-var i = n
+	-var ocasioes={}
+	-var add_cart={}
+	-var ver_mais={}
+	-var nome_drink={}
+	-var texto ={}
+	-var links ={}
+	-var image_drink={}
+	-ocasioes.class='drink_more'
+	-ocasioes_texto=''
+	-add_cart.class='add_to_cart'
+	-add_cart.target='_blank'
+	-add_cart_texto='Adicionar ao carrinho'
+	-ver_mais.class='more'
+	-ver_mais_texto='Ver mais'
+	case i
+		when 1
+			-texto.h3= "Drinks para acompanhar o seu"
+			-texto.h2= "Churrasco"
+			-texto.p= "Combinações fáceis para o seu churrasco ser completo."
+			-ocasioes.href= "http://busca.paodeacucar.com/ppc/drinkstore_churrasco"
+			-nome_drink.p= "Caipirinha de Limão"
+			-add_cart.href="http://busca.paodeacucar.com/ppc/drinkstore_churrasco_caipirinha"
+			-ver_mais.href="http://busca.paodeacucar.com/ppc/drinkstore_churrasco#caipirinha-de-limao"
+			-image_drink.src = "images/home/churrasco-drink.png"
+			
+		when 2
+			-texto.h3= "Drinks fáceis para o seu"
+			-texto.h2= "Esquenta"
+			-texto.p= "Confira os drinks para o seu esquenta ficar ainda melhor!"
+			-ocasioes.href= "http://busca.paodeacucar.com/ppc/drinkstore_esquenta"
+			-nome_drink.p= "Red Citrus"
+			-add_cart.href="http://busca.paodeacucar.com/ppc/drinkstore_esquenta_redcitrus"
+			-ver_mais.href="http://busca.paodeacucar.com/ppc/drinkstore_esquenta#red-citrus-esquenta"
+			-image_drink.src = "images/home/esquenta-drink.png"
+			
+		when 3
+			-texto.h3= "Drinks perfeitos para"
+			-texto.h2= "Receber em casa"
+			-texto.p= "Reunir os amigos em casa fica ainda melhor com uma seleção especial de drinks."
+			-ocasioes.href= "http://busca.paodeacucar.com/ppc/drinkstore_receberemcasa"
+			-nome_drink.p= "TANQUERAY TONIC"
+			-add_cart.href="hhttp://busca.paodeacucar.com/ppc/drinkstore_receberemcasa_tanqueraytonic"
+			-ver_mais.href="http://busca.paodeacucar.com/ppc/drinkstore_receberemcasa#tanqueray-tonic"
+			-image_drink.src = "images/home/receber-em-casa-drink.png"
+	
+	
+	-var tag_a= 'a'
+	-var tag_img='img'
+	-var tag_h2='h2'
+	-var tag_h3='h3'
+	-var tag_p='p'
+	
+	if tag== tag_a
+		if type=='ocasioes'
+			a&attributes(ocasioes)= ocasioes_texto
+		else if type=='add_cart'
+			a&attributes(add_cart)= add_cart_texto
+		else if type=='ver_mais'
+			a&attributes(ver_mais)= ver_mais_texto
+
+
+	if tag==tag_p && type=="nome_drink"
+		p
+			span •
+			= (nome_drink[tag])
+	else
+		if type=="texto"
+			#{tag}= (texto[tag])
+		else if  type=="image_drink"	
+			img&attributes(image_drink)/
+			
+				
+
+mixin estrutura(n)
+	-var hash={}
+	-var i = n
+	case i
+		when 1
+			-hash.id= "churrasco"
+			-item_class='container drink-item clearfix'
+			-actions_class='drink-actions drink-actions--right'
+			-actions_link_class='drink-actions-link drink-actions-link--right'
+		when 2
+			-hash.id= "esquenta"
+			-item_class='container drink-item drink-item--right'
+			-actions_class='drink-actions'
+			-actions_link_class='drink-actions-link'
+		when 3
+			-hash.id= "receber-em-casa"
+			-item_class='container drink-item clearfix'
+			-actions_class='drink-actions drink-actions--right'
+			-actions_link_class='drink-actions-link drink-actions-link--right'
+
+	section.drinks&attributes(hash)
+		figure.background-shadow
+			if hash.id=="churrasco" || hash.id=="receber-em-casa"
+				.container
+					+content('img','image_drink', n)
+			else
+				+content('img','image_drink', n)
+		div(class=item_class)
+			+article
+			+aside
+			a.back-top(href="#hero")
+
+
+
+mixin article(classe)
+		.drink-details
+			+content('h3','texto', n)
+			+content('h2','texto', n)
+			+content('p','texto', n)
+			+content('a','ocasioes', n)
+mixin aside(classe)
+		.drink-actions(class=actions_class)
+			+content('p','nome_drink', n)
+			div(class=actions_link_class)
+				+content('a','add_cart', n)
+				+content('a','ver_mais', n)

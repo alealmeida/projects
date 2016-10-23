@@ -1,0 +1,226 @@
+
+<!--append vars-->
+<!--tag LINK-->
+<!--tag--><!DOCTYPE html>
+<html>
+  <head>
+    <link href="assets/yahoo_320x50/css/example.css" media="screen" rel="stylesheet" type="text/css"/>
+    <link href="assets/yahoo_320x50/css/tweenjs.css" media="screen" rel="stylesheet" type="text/css"/>
+    <link href="assets/yahoo_320x50/css/style.css" media="screen" rel="stylesheet" type="text/css"/>
+    <script src="assets/yahoo_320x50/js/easeljs-0.8.2.min.js" type="text/javascript"></script>
+    <script src="assets/yahoo_320x50/js/easeljs-NEXT.min.js" type="text/javascript"></script>
+    <script src="assets/yahoo_320x50/js/examples.js" type="text/javascript"></script>
+    <script src="assets/yahoo_320x50/js/tweenjs-NEXT.min.js" type="text/javascript"></script>
+    <script src="assets/yahoo_320x50/js/CSSPlugin.js" type="text/javascript"></script>
+    <!--[if IE] <link href="/css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" /> [endif]-->
+    <script>
+      var stage,stage2,expand;
+      
+      function init() {
+      
+      	createjs.CSSPlugin.install(createjs.Tween);
+      	var content = document.getElementById("scene__1");
+      	var bg_scene = document.getElementById("bg_scene");
+      	var drink_infos = document.getElementById("drink__infos");
+      	var nome_drink = document.getElementById("nome_drink");
+      	var boom = document.getElementById("boom");
+      	var frase_1 = document.getElementById("infos__frase_1");
+      	var frase_2 = document.getElementById("infos__frase_2");
+      	var frase_3 = document.getElementById("infos__frase_3");
+      	var boom_1 = document.getElementById("boom__item_1");
+      	var boom_2 = document.getElementById("boom__item_2");
+      	var conheca = document.getElementById("conheca");
+      	
+      	var w=320;
+      	var h=50;
+      	
+      	var expand = document.getElementById("expand");
+      	var canvas = document.getElementById("container");
+      	var stage = new createjs.Stage(canvas);
+      	var stage2 = new createjs.Stage(expand);
+      	
+      	stage.enableMouseOver;
+      	stage2.enableMouseOver;
+      	var container = new createjs.Container();
+      	var container2 = new createjs.Container();
+      	
+      	
+      	stage.addChild(container);
+      	stage2.addChild(container2);
+      	//				container.on("mouseover",setup);
+      				//				container.on("mouseout",setup);
+      	canvas.addEventListener("mouseover", handleOver);
+      	canvas.addEventListener("mouseout", handleOut);
+      	
+      	var normal_h = 50;
+      	var  expand_h = 480;
+      	expand.style.opacity=0;
+      	function handleOver(event) {
+      		if (event.type == "mouseover")
+      			createjs.Tween.get( canvas , {loop: false})
+      				.to({ height: normal_h }, 0)
+      				.to({ height: expand_h },350, createjs.Ease.quintOut).wait(300);
+      		stage2.zIndex=3
+      	}
+      	function handleOut(event) {
+      		if (event.type == "mouseout")
+      			createjs.Tween.get( canvas , {loop: false})
+      				.to({ height: expand_h }, 0)
+      				.to({ height: normal_h },350, createjs.Ease.quintOut).wait(300);
+      	}
+      	
+      
+      	var nome_drink = 
+      				createjs.Tween.get(nome_drink, {loop: false})
+      				.to({ left: -w }, 0).wait(2000)
+      				.to({ left: 0 },350, createjs.Ease.quintOut).wait(300)
+      				.play(frase1)
+      	var frase1 = 
+      				createjs.Tween.get(frase_1, {loop: false})
+      				.to({ left: -w }, 0).wait(1400)
+      				.to({ left: 200 },400, createjs.Ease.quintOut).wait(300)
+      				.play(frase2)
+      	var frase2 = 
+      				createjs.Tween.get(frase_2, {loop: false})
+      				.to({ left: -w }).wait(1550)
+      				.to({ left: 200 },350, createjs.Ease.quintOut).wait(600)
+      				.play(frase3)
+      	var frase3 = 
+      				createjs.Tween.get(frase_3, {loop: false})
+      				.to({ left: -w }).wait(1500)
+      				.to({ left: 200 },650, createjs.Ease.quintOut).wait(700)
+      				
+      	var boom1 = 
+      				createjs.Tween.get(boom_1, {loop: false})
+      					.to({width: 160, height: 100, opacity:0}, 10).wait(4000)
+      					.to({width: 219, height: 127, opacity:1, left:-30, top:-15}, 700, createjs.Ease.backOut)
+      					
+      
+      		createjs.Tween.get(saibamais, {loop: false})
+      			.to({opacity:0}).wait(6300)
+      			.to({opacity:1}, 1300, createjs.Ease.Linear)
+      			
+      }
+      
+    </script>
+    <style>
+      #clickTag{
+      	position: relative;
+      	width: 320px;
+      	height: 50px;
+      	margin: 0 auto;
+      	background: #000;
+      	overflow:hidden;
+      }
+      #container{
+      	position: absolute;
+      	width: 320px;
+      	height: 50px;
+      	margin: 0 auto;
+      	padding: 0;
+      	background: #000;
+      	overflow: hidden;
+      }
+      #expand{
+      	position: absolute;
+      	width: 320px;
+      	height: 480px;
+      	margin: 0 auto;
+      	padding: 0;
+      	background: #000;
+      	overflow: hidden;
+      	
+      }
+      #container *{
+      	transition: transform .2s ease-out;
+      }
+      #scene__1 {
+      	width: 320px;
+      	height: 50px;
+      	position: absolute;
+      	transition: transform .2s ease-out;
+      	top: 0;
+      	left: 0;
+      }
+      .drink{
+      	position: absolute;
+      	z-index:2;
+      	bottom: 0; 
+      }
+      #nome_drink{
+      	position: absolute;
+      	z-index:3;
+      	bottom: 5px;
+      	left: -150px;
+      }
+      #bg_scene {
+      	width: 320px;
+      	height: 50px;
+      	position: absolute;
+      }
+      #drink__infos {
+      	position: absolute;
+      	top: 140px;
+      	z-index:1;
+      }
+      #infos__frase_1,#infos__frase_2,#infos__frase_3 {
+      	position: absolute;
+      	left: -200px;
+      }
+      #infos__frase_2 {
+      	top: 33px;
+      }
+      #infos__frase_3 {
+      	top: 65px;
+      }
+      #boom {
+      	position: absolute;
+      	left: 230px;
+      	top: 25px;
+      	height: 100px;
+      }
+      #boom__item_1 {
+      	position: relative;
+      }
+      #saibamais {
+      	position: absolute;
+      	bottom:2px;
+      	right: 85px;
+      }
+      
+      #link_gpa {
+      	position: absolute;
+      	bottom:14px;
+      	right: 35px;
+      	width: 67px;
+      	height:59px;
+      }
+      #aprecie {
+      	position: absolute;
+      	bottom:0px;
+      	left: 5px;
+      	width:103px;
+      	height: 24px;
+      	z-index:3;
+      }
+    </style>
+  </head>
+  <body onload="init()"><a id="clickArea" target="_blank" href="#">
+      <div id="container">
+        <div id="scene__1">
+          <div id="bg_scene" style="background:url(assets/yahoo_320x50/images/bg__scene.jpg); background-size: cover"></div><img id="nome_drink" src="assets/yahoo_320x50/images/nome_drink.png"><img class="drink" src="assets/yahoo_320x50/images/drink__whisky.png">
+          <div id="drink__infos"><img id="infos__frase_1" src="assets/yahoo_320x50/images/txt_aprendaafazer.png"><img id="infos__frase_2" src="assets/yahoo_320x50/images/txt_osdrinksereceba.png"><img id="infos__frase_3" src="assets/yahoo_320x50/images/txt_osingredientesemcasa.png"></div>
+          <div id="boom"><img id="boom__item_1" src="assets/yahoo_320x50/images/logo.png"></div>
+        </div><img id="saibamais" src="assets/yahoo_320x50/images/cta_saibamais.png"><img id="link_gpa" src="assets/yahoo_320x50/images/logo_gpa.png"><img id="aprecie" src="assets/yahoo_320x50/images/txt_apreciecommoderacao.png">
+      </div>
+      <div id="expand">
+        <div id="scene__1">
+          <div id="bg_scene" style="background:url(assets/yahoo_320x50/images/bg__scene.jpg); background-size: cover"></div><img id="nome_drink" src="assets/yahoo_320x50/images/nome_drink.png"><img class="drink" src="assets/yahoo_320x50/images/drink__whisky.png">
+          <div id="drink__infos"><img id="infos__frase_1" src="assets/yahoo_320x50/images/txt_aprendaafazer.png"><img id="infos__frase_2" src="assets/yahoo_320x50/images/txt_osdrinksereceba.png"><img id="infos__frase_3" src="assets/yahoo_320x50/images/txt_osingredientesemcasa.png"></div>
+          <div id="boom"><img id="boom__item_1" src="assets/yahoo_320x50/images/logo.png"></div>
+        </div><img id="saibamais" src="assets/yahoo_320x50/images/cta_saibamais.png"><img id="link_gpa" src="assets/yahoo_320x50/images/logo_gpa.png"><img id="aprecie" src="assets/yahoo_320x50/images/txt_apreciecommoderacao.png">
+      </div></a></body>
+</html>
+<!--		script.-->
+<!--			var clickArea = document.getElementById("clickArea");-->
+<!--			clickArea.href = clickTAG;-->

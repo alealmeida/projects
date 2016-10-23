@@ -1,0 +1,32 @@
+include _assets/_includes/mixins_churrasco.pug
+include _assets/_includes/var_churrasco.pug
+
+block vars
+doctype html
+html
+	head
+		block head
+			title DRINKSTORE
+			meta(charset="utf-8")
+			+link("style.css")
+			//[if IE] <link href="/css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" /> [endif]
+			
+		style(type="text/css").
+			html,body{margin:0;padding:0;}
+	body
+		.d-store
+			header(id="hero")
+				+header
+				a.logo(href="http://busca.paodeacucar.com/ppc/drinkstore")
+					h1 Drinkstore
+			nav.navbar.navbar-items
+				ul
+					-for(i=1;i<=count+2;i++)
+						+menu(i)
+			-for(n=1;n<=count+1;n++)
+				+estrutura(n)
+			footer#footer
+				.container
+					p Sujeito a disponibilidade de estoque. SE BEBER, NÃO DIRIJA.
+		+script("jquery.js")
+		+script("drinkstore.js")

@@ -1,0 +1,11 @@
+#scene__1 {
+	position: absolute;
+	width: 480px;
+	height: 320px;
+}
+
+.bg_scene {
+	background: url('../images/bg__scene.jpg');
+	width: 480px;
+	height: 320px;
+}

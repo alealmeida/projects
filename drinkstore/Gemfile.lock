@@ -187,6 +187,7 @@ DEPENDENCIES
   bootstrap (~> 4.0.0.alpha4)
   byebug
   coffee-rails (~> 4.2)
+  coffee-script (~> 2.4, >= 2.4.1)
   compass-rails
   ejs
   jbuilder (~> 2.5)

@@ -1,0 +1,40 @@
+
+include assets/_includes/yahoo_300x600/pug/var.pug
+
+doctype html
+html
+	head
+		block head
+			+script("tweenjs-NEXT.min.js")
+			+script("CSSPlugin.js")
+			+link("style.css")
+			
+			//[if IE] <link href="/css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" /> [endif]
+				
+			
+	body(onload="init()")
+		a(id="clickArea", target="_blank",href="#")
+			#canvas
+				img(id=bg,src=bg_scene)
+				div(id=sc1)
+					div(id=chamadas)
+						img(id=c1,src=chamada_1)/
+						img(id=c2,src=chamada_2)/
+						img(id=c3,src=chamada_3)/
+						img(id=sh,src=shadow)/
+				div(id=sc2)
+					div(id=infos)
+						img(id=i1,src=frase_1)/
+						img(id=i2,src=frase_2)/
+						img(id=i3,src=frase_3)/
+				img(id=boo,src=logo_drinkstore)/
+
+				img(id=cta,src=saibamais)
+				img(id=gpa,src=logo_gpa)
+				img(id=aprecie,src=legal)
+		
+		+script("banner.js")
+		script.
+			var clickArea = document.getElementById("clickArea");
+			clickArea.href = clickTAG;		
+				

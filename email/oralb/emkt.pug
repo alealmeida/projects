@@ -1,0 +1,134 @@
+//variables
+
+-var reset = {}
+- reset.width = 620
+- reset.style = "margin:0; padding:0;"
+- reset.align = "center"
+
+-var medidas = {}
+- medidas.cellpadding = 0
+- medidas.cellspacing = 0
+- medidas.border = 0
+- medidas.style = "margin:0; padding:0;"
+
+-var medidasfull = {}
+- medidasfull.width = 620
+- medidasfull.cellpadding = 0
+- medidasfull.cellspacing = 0
+- medidasfull.border = 0
+- medidasfull.bgcolor = "#ffffff"
+- medidasfull.style = "margin:0; padding:0;"
+- medidasfull.align = "center"
+
+
+-var width = {}
+- width.width = 620
+
+//mixin
+mixin img(q, ...attrs)
+	-var total = q
+	if q<=1
+		each i in attrs
+			-var infos = {}
+			- infos.width = i[1]
+			- infos.height = i[2]
+			- infos.src = "images/img_"+i[0]+".jpg"
+			- infos.alt = i[3]
+			- infos.title = i[3]
+			- infos.style = "display: block;"
+			- infos.border = 0
+			
+			img&attributes( infos )
+
+
+doctype html
+html
+	head
+		title
+		meta(http-equiv="Content-Type",content="text/html; charset=utf-8")
+		
+	body&attributes( reset )
+		table(height="1668")&attributes( medidasfull )
+			tr
+				td
+					+img(1,[ 1, width.width , 102, "Recomende a seus pacientes os produtos oral-b contra a sensibilidade" ])
+			tr
+				td
+					+img(1,[ 2, width.width , 114, "LOGO ORAL-B" ])
+			tr
+				td
+					table&attributes( medidasfull )
+						tr
+							td(width="297")
+								+img(1,[ 3, 297, 216, "24h de proteção contra a sensibilidade" ])
+							td(width="323")
+								table&attributes( medidas )
+									tr
+										td
+											+img(1,[ 4, 323, 70, "Proteção clnicamente comprovada para dentes sensíveis. Até 24h de proteção contra a sensibilidade" ])
+									tr
+										td
+											+img(1,[ 5, 323, 58, "Contém o fluoreto de sódio e o estanho estabilizado, ajudando a obliterar os túbulos dentinários com uma capa mineral duradoura, reduzindo assim a sensibilidade;" ])
+									tr
+										td
+											+img(1,[ 6, 323, 88, "Esta fórmula auxilia não somente em relação à sensibilidade como também previne as futuras causas da hipersensibilidade, como erosão dental e problemas gengivais." ])
+			tr
+				td(width="620")
+					table&attributes( medidas )
+						tr
+							td(width="297")
+								+img(1,[ 7, 297, 226, "Dentina não tratada" ])
+							td(width="323")
+								+img(1,[ 8, 323, 226, "Dentina tratada" ])
+			tr
+				td
+					+img(1,[ 9, medidas.width, 36, "Após 5 escovações com amostra de dentina" ])
+			tr
+				td
+					+img(1,[ 10, medidas.width, 191, "Grau de oclusão dos túbulos dentinários após o uso de diferentes cremes dentais*" ])
+			tr
+				td
+					table&attributes( medidas )
+						tr
+							td
+								+img(1,[ 12, 297, 42, "Desafios ácidos e pós-mecânicos" ])
+							td
+								+img(1,[ 11, 323, 42, "*Zsiska M et al. J Dent Res 2011: 90 sp iss A abs 2635" ])
+			tr
+				td
+					+img(1,[ 13, medidas.width, 193, "Delicada com a gengiva, efetiva contra a placa. Com cerdas extra-suaves para uma sensação de limpeza diária." ])
+			tr
+				td
+					table&attributes( medidas )
+						tr
+							td(width="383")
+								table&attributes( medidas )
+									tr
+										td
+											+img(1,[ 14, 383, 71, "Cerdas polidas de pontas arredondadas limpam efetivamente sobre a linha das gengivas." ])
+									tr
+										td
+											+img(1,[ 15, 383, 60, "**Cerdas Azuis INDICATOR®   Descolorem à medida que são usadas, indicando o momento da troca." ])
+									tr
+										td
+											+img(1,[ 16, 383, 125, "Cabeça Oval Para permitir acesso aos dentes posteriores. Disponível no tamanho 35." ])
+							td
+								table&attributes( medidas )
+									tr
+										td
+											+img(1,[ 17, 237, 112, "Cerdas Planas para aqueles que preferem uniformidade no desenho das cerdas." ])
+									tr
+										td
+											+img(1,[ 18, 237, 144, "Cabo Emborrachado garante conforto e controle com seu cabo ergonômico de 2 materiais." ])
+			tr
+				td
+					+img(1,[ 19, medidas.width, 222, "É hora de deixar seu consultório mais completo ao garantir os produtos Oral-B para seus pacientes. Aproveite as condições exclusivas e leve, agora, produtos com até 30% de desconto! Confira: www.dentalcremer.com.br." ])
+			tr
+				td
+					+img(1,[ 20, medidas.width, 85, "Personalize seu produto! Escolha no site da Dental Cremer e faça seu pedido." ])
+				
+			
+			
+			
+			
+			

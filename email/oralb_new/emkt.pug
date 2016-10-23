@@ -1,0 +1,115 @@
+
+-var reset = {}
+- reset.style = "margin: 0; padding: 0;"
+
+-var body = {}
+- body.align = "center"
+- body.leftmargin= 0
+- body.rightmargin= 0
+- body.topmargin= 0
+- body.bottommargin= 0
+- body.cellpadding = 0
+- body.cellspacing = 0
+
+
+
+-var tableMae = {}
+- tableMae.height = 1668
+- tableMae.width= 620
+- tableMae.cellpadding = 0
+- tableMae.cellspacing = 0
+- tableMae.border = 0
+- tableMae.style="border-collapse: collapse;"
+
+-var table = {}
+- table.cellpadding = 0
+- table.cellspacing = 0
+- table.border = 0
+
+-var medidasfull = {}
+- medidasfull.width = 620
+- medidasfull.cellpadding = 0
+- medidasfull.cellspacing = 0
+- medidasfull.border = 0
+- medidasfull.bgcolor = "#ffffff"
+- medidasfull.align = "center"
+
+
+-var width = {}
+- width.width = 620
+
+
+mixin img(q, ...attrs)
+	-var total = q
+	if q<=1
+		each i in attrs
+			-var infos = {}
+			- infos.width = i[1]
+			- infos.height = i[2]
+			- infos.src = "images/img_"+i[0]+".jpg"
+			- infos.alt = i[3]
+			- infos.title = i[3]
+			- infos.border = 0
+			- infos.style = "margin:0; padding:0;"
+			
+			img&attributes( infos )
+
+doctype html
+html&attributes( body )
+	head
+		title
+		meta(http-equiv="Content-Type", content="text/html; charset=UTF-8")
+		meta(name="viewport",content="width=device-width, initial-scale=1.0")
+		style.
+			img {margin: 0; padding: 0; display: block; float: left; border: 0;}
+	body&attributes( body )
+		table&attributes( tableMae )
+			tr
+				td(colspan=2)
+					+img(1,[ 1, width.width , 101, "Recomende a seus pacientes os produtos oral-b contra a sensibilidade" ])
+					+img(1,[ 2, width.width , 112, "LOGO ORAL-B" ])
+			tr
+				td(colspan=2)
+					table&attributes( table )
+						tr
+							td
+								+img(1,[ 3, 297, 214, "24h de proteção contra a sensibilidade" ])
+							td
+								+img(1,[ 4, 323, 69, "Proteção clnicamente comprovada para dentes sensíveis. Até 24h de proteção contra a sensibilidade" ])
+								+img(1,[ 5, 323, 61, "Contém o fluoreto de sódio e o estanho estabilizado, ajudando a obliterar os túbulos dentinários com uma capa mineral duradoura, reduzindo assim a sensibilidade;" ])
+								+img(1,[ 6, 323, 84, "Esta fórmula auxilia não somente em relação à sensibilidade como também previne as futuras causas da hipersensibilidade, como erosão dental e problemas gengivais." ])
+			tr
+				td(colspan=2)
+					+img(1,[ 7, 297, 226, "Dentina não tratada" ])
+					+img(1,[ 8, 323, 226, "Dentina tratada" ])
+			tr
+				td(colspan=2)
+					+img(1,[ 9, width.width, 31, "Após 5 escovações com amostra de dentina" ])
+			tr
+				td(colspan=2)
+					+img(1,[ 10, width.width, 192, "Grau de oclusão dos túbulos dentinários após o uso de diferentes cremes dentais*" ])
+			tr
+				td(colspan=2)
+					+img(1,[ 11, 297, 35, "Desafios ácidos e pós-mecânicos" ])
+					+img(1,[ 12, 323, 35, "*Zsiska M et al. J Dent Res 2011: 90 sp iss A abs 2635" ])
+			tr
+				td(colspan=2)
+					+img(1,[ 13, width.width,206, "Delicada com a gengiva, efetiva contra a placa. Com cerdas extra-suaves para uma sensação de limpeza diária." ])
+			tr
+				td(width=383)
+					+img(1,[ 14, 383, 60, "Cerdas polidas de pontas arredondadas limpam efetivamente sobre a linha das gengivas." ])
+					+img(1,[ 15, 383, 59, "**Cerdas Azuis INDICATOR®   Descolorem à medida que são usadas, indicando o momento da troca." ])
+					+img(1,[ 16, 383, 128, "Cabeça Oval Para permitir acesso aos dentes posteriores. Disponível no tamanho 35." ])
+				td(width=237)
+					+img(1,[ 17, 237, 99, "Cerdas Planas para aqueles que preferem uniformidade no desenho das cerdas." ])
+					+img(1,[ 18, 237, 148, "Cabo Emborrachado garante conforto e controle com seu cabo ergonômico de 2 materiais." ])
+			tr
+				td(colspan=2)
+					+img(1,[ 19, width.width, 230, "É hora de deixar seu consultório mais completo ao garantir os produtos Oral-B para seus pacientes. Aproveite as condições exclusivas e leve, agora, produtos com até 30% de desconto! Confira: www.dentalcremer.com.br." ])
+					+img(1,[ 20, width.width, 74, "Personalize seu produto! Escolha no site da Dental Cremer e faça seu pedido." ])
+				
+			
+			
+			
+			
+			
