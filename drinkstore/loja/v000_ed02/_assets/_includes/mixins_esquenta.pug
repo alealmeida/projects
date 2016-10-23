@@ -1,0 +1,267 @@
+append head
+	mixin link(nome)
+		//-	tag link
+		-var link_attr = {}
+		- link_attr.href= css_dir+nome
+		- link_attr.media= "screen"
+		- link_attr.rel= "stylesheet"
+		- link_attr.type= "text/css"
+		link&attributes(link_attr)
+	mixin script(nome)
+		//-	tag script
+		-var scr_attr = {}
+		- scr_attr.src= js_dir+nome
+		- scr_attr.type= "text/javascript"
+		script&attributes(scr_attr)
+		
+mixin header
+	-var video_attr={}
+	-var source_attr={}
+	-video_attr.class="bg_video"
+	-video_attr.autoplay="autoplay"
+	-video_attr.loop="loop"
+	-video_attr.poster=img_dir+"header.jpg"
+	-source_attr.type="video/mp4"
+	-source_attr.src=media_dir+"header.mp4"
+	video&attributes(video_attr)
+		source&attributes(source_attr)
+		
+mixin menu(i)
+	-var li_attr={}
+	-var a_attr={}
+	-var index=i
+	case index
+		when 1
+			-li_attr.class="esquenta"
+			-a_attr.href="#"
+			-a_text="Esquenta"
+		when 2
+			-li_attr.class="no-icon"
+			-a_attr.href="#smirnoff-cola"
+			-a_text="Smirnoff® Cola"
+		when 3
+			-li_attr.class="no-icon"
+			-a_attr.href="#ciroc-night"
+			-a_text="CÎROC™ Night"
+		when 4
+			-li_attr.class="no-icon"
+			-a_attr.href="#red-citrus-esquenta"
+			-a_text="RED CITRUS"
+		when 5
+			-li_attr.class="no-icon"
+			-a_attr.href="#ketel-one-lemon-tea"
+			-a_text="Ketel One® Lemon Tea"
+		when 6
+			-li_attr.class="no-icon"
+			-a_attr.href="#shot-fogosanto"
+			-a_text="Shot FogoSanto"
+		when 7
+			-li_attr.class="no-icon"
+			-a_attr.href="#pronto-para-beber"
+			-a_text="pronto para beber"
+	li&attributes(li_attr)
+		a&attributes(a_attr)= a_text
+		
+mixin content(item, type, n)
+	-var tag=item
+	-var i = n
+	-var list={}
+	-var info_value={}
+	-var info_measures={}
+	-var info_difficulty={}
+	-var info_doses={}
+	-var drink_buy={}
+	-var nome_drink={}
+	-var texto ={}
+	-var links ={}
+	-var image_drink={}
+	-drink_buy.class='drink-buy'
+	-drink_buy_texto='comprar'
+	-drink_buy.target='_blank'
+	-info_doses.class='info_doses'
+	case i
+		when 1
+			-texto.h2= "Smirnoff® Cola"
+			-texto.h3= "O mix sem complicação para curtir com a galera"
+			-texto.p= "Em um copo alto com gelo, acrescente a dose de Smirnoff® e complete com o refrigerante. Finalize com uma fatia de limão tahiti."
+			-drink_buy.href= "http://busca.paodeacucar.com/ppc/drinkstore_churrasco"
+			-image_drink.src = "images/esquenta/smirnoff-cola-drink.png"
+			-info_value.div= ["14,79 g"]
+			-info_measures.div= ["Grad. Alcoólica"]
+			-info_difficulty.div= "Fácil"
+			-info_difficulty_classe= "difficulty--facil"
+			-info_doses_texto= "20 doses"
+			-list.li=['1 dose (50 ml) de vodca Smirnoff®','90 ml de refrigerante tipo cola','1 fatia de limão tahiti','Gelo a gosto']
+			
+		when 2
+			-texto.h2= "CÎROC™ Night"
+			-texto.h3= "Clima de festa para sua noite"
+			-texto.p= "Em um copo longo com gelo, adicione a dose de vodca CÎROC™ e 150 ml de suco de cranberry. Adicione uma fatia de limão siciliano e mexa brevemente para incorporar os sabores."
+			-drink_buy.href= "http://busca.paodeacucar.com/ppc/drinkstore_esquenta"
+			-image_drink.src = "images/esquenta/ciroc-night-drink.png"
+			-info_value.div= ["13.8 g"]
+			-info_measures.div= ["Grad. Alcoólica"]
+			-info_difficulty.div= "Fácil"
+			-info_difficulty_classe= "difficulty--facil"
+			-info_doses_texto= "15 doses"
+			-list.li=['1 dose (50 ml) de vodca CÎROC™','150 ml de suco de cranberry', '1 fatia de limão siciliano', 'Gelo a gosto']
+			
+		when 3
+			-texto.h2= "RED CITRUS"
+			-texto.h3= "Uma mistura de sabores fora do óbvio"
+			-texto.p= "Encha um copo alto com gelo, adicione a dose de Johnnie Walker® Red Label® e complete com refrigerante sabor citrus."
+			-drink_buy.href= "http://busca.paodeacucar.com/ppc/drinkstore_receberemcasa"
+			-image_drink.src = "images/esquenta/red-citrus-drink.png"
+			-info_value.div= ["15,8 g"]
+			-info_measures.div= ["Grad. Alcoólica"]
+			-info_difficulty.div= "Fácil"
+			-info_difficulty_classe= "difficulty--facil"
+			-info_doses_texto= "15 doses"
+			-list.li=['1 dose (50 ml) de Johnnie Walker® Red Label®','4 morangos cortados ao meio','75 ml de refrigerante citrus','Gelo a gosto']
+		when 4
+			-texto.h2= "Ketel One® Lemon Tea"
+			-texto.h3= "Um toque refrescante para seu esquenta"
+			-texto.p= "Em um copo longo com gelo, adicione a dose de vodca Ketel One® e 150 ml de chá gelado sabor limão. Adicione as fatias de limão e mexa brevemente para incorporar os sabores."
+			-drink_buy.href= "http://busca.paodeacucar.com/ppc/drinkstore_churrasco_caipiroskamorango"
+			-image_drink.src = "images/esquenta/ketel-one-lemon-tea-drink.png"
+			-info_value.div= ["15,7 g"]
+			-info_measures.div= ["Grad. Alcoólica"]
+			-info_difficulty.div= "Fácil"
+			-info_difficulty_classe= "difficulty--facil"
+			-info_doses_texto= "20 doses"
+			-list.li=['1 dose (50 ml) de vodca Ketel One®','150 ml de chá gelado sabor limão', '2 fatias de limão', 'Gelo a gosto']
+			
+		when 5
+			-texto.h2= "Shot FogoSanto"
+			-texto.h3= "Um toque apimentado para seu esquenta"
+			-texto.p= "Reunião com os amigos sempre tem um motivo pra brindar. E este momento pede uma bebida diferente! Deixe a sua garrafa de Ypióca® FogoSanto no refrigerador por pelo menos 2 horas.  Na hora de apreciá-la, sirva em copinhos de shot."
+			-drink_buy.href= "http://busca.paodeacucar.com/ppc/drinkstore_churrasco_prontaparabeber"
+			-image_drink.src = "images/esquenta/shot-fogosanto-drink.png"
+			-info_value.div= ["17%"]
+			-info_measures.div= ["Grad. Alcoólica."]
+			-info_difficulty.div= "Fácil"
+			-info_difficulty_classe= "difficulty--facil"
+			-info_doses_texto= "19 drinks"
+			-list.li=[]
+			
+		when 6
+			-texto.h2= "Prontos para beber"
+			-texto.h3= "Sabores únicos e praticidade pra qualquer momento"
+			-texto.p= "A sua turma faz o estilo prático, mas não abre mão da qualidade? Então, Smirnoff® Ice é a pedida certa! Basta escolher o sabor preferido e apreciá-la bem gelada com a galera."
+			-drink_buy.href= "http://busca.paodeacucar.com/ppc/drinkstore_churrasco_prontaparabeber"
+			-image_drink.src = "images/esquenta/prontos-para-beber-drink.png"
+			-info_value.div= ["5%","6%"]
+			-info_measures.div= ["Grad. Alcoólica. <br/> Smirnoff® Ice ","Grad. Alcoólica. <br/> Smirnoff® Ice Storm"]
+			-info_difficulty.div= "Fácil"
+			-info_difficulty_classe= "difficulty--facil"
+			-info_doses_texto= ""
+			-list.li=[]
+	
+	-var tag_a= 'a'
+	-var tag_img='img'
+	-var tag_h2='h2'
+	-var tag_h3='h3'
+	-var tag_p='p'
+	-var tag_div='div'
+	-var tag_li='li'
+	
+	if tag== tag_li
+		if type=='list'
+			ul
+				-var len = list.li.length
+				-for(i=0;i<len;i++)
+					li=list.li[i]
+	if tag== tag_a
+		if type=='drink_buy'
+			a&attributes(drink_buy)= drink_buy_texto
+	if tag== tag_div
+		
+		if type=='info_value'
+			-var len = info_value.div.length
+			-for(i=0;i<len;i++)
+				.value.
+					!{info_value.div[i]}
+				.measures.
+					!{info_measures.div[i]}
+			
+		else if type=='info_difficulty'
+			.difficulty(class=info_difficulty_classe).
+				!{info_difficulty.div} 
+		else if type=='info_doses' 
+			if info_doses_texto!=''
+				div&attributes(info_doses).
+					1 garrafa <br />
+					<span>= <br />
+					#{info_doses_texto} </span> 
+				
+	if tag==tag_p && type=="nome_drink"
+		p
+			span •
+			= (nome_drink[tag])
+	else
+		if type=="texto"
+			#{tag}= (texto[tag])
+		else if  type=="image_drink"	
+			img&attributes(image_drink)/
+			
+mixin estrutura(n)
+	-var hash={}
+	-var i = n
+	case i
+		when 1
+			-hash.id= "smirnoff-cola"
+			-item_class='container drink-item clearfix'
+			-details_class='drink-details drink-details--item'
+			-info_class='drink-info drink-info--right'
+		when 2
+			-hash.id= "ciroc-night"
+			-item_class='container drink-item drink-item--right'
+			-details_class='drink-details drink-details--item'
+			-info_class='drink-info'
+		when 3
+			-hash.id= "red-citrus-esquenta"
+			-item_class='container drink-item clearfix'
+			-details_class='drink-details drink-details--item'
+			-info_class='drink-info drink-info--right'
+		when 4
+			-hash.id= "ketel-one-lemon-tea"
+			-item_class='container drink-item drink-item--right'
+			-details_class='drink-details drink-details--item'
+			-info_class='drink-info'
+		when 5
+			-hash.id= "shot-fogosanto"
+			-item_class='container drink-item clearfix'
+			-details_class='drink-details drink-details--item'
+			-info_class='drink-info drink-info--right'
+		when 6
+			-hash.id= "prontos-para-beber"
+			-item_class='container drink-item drink-item--right'
+			-details_class='drink-details drink-details--item'
+			-info_class='drink-info'
+			
+	section.drinks&attributes(hash)
+		figure.background-shadow
+			if hash.id=="smirnoff-cola" || hash.id=="red-citrus-esquenta" || hash.id=="shot-fogosanto"
+				.container
+					+content('img','image_drink', n)
+			else
+				+content('img','image_drink', n)
+		div(class=item_class)
+			+article
+			+aside
+			a.back-top(href="#hero")
+			
+mixin article(classe)
+	div(class=details_class)
+		header
+			+content('h2','texto', n)
+			+content('h3','texto', n)
+		+content('li','list', n)
+		+content('p','texto', n)
+		+content('div','info_doses', n)
+		+content('a','drink_buy', n)
+mixin aside(classe)
+	div(class=info_class)
+		+content('div','info_difficulty', n)
+		+content('div','info_value', n)
+		+content('div','info_measures', n)
