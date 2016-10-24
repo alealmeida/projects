@@ -12,16 +12,22 @@
   font-weight: normal;
   font-style: normal; }
 
-/* line 24, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+@font-face {
+  font-family: 'thirsty';
+  src: url("../fonts/thirstyroughlight-webfont.woff2") format("woff2"), url("../fonts/thirstyroughlight-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+/* line 31, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
 .categoryList {
   display: none; }
 
-/* line 28, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+/* line 35, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
 .d-store {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   position: relative;
   overflow: hidden; }
-  /* line 1, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/_buttons.scss */
+  /* line 1, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/_buttons.scss */
   .d-store a.drink-more {
     color: #e5ac34;
     font-size: 16px;
@@ -29,7 +35,7 @@
     padding: 0 15px 0 38px;
     position: relative;
     text-transform: uppercase; }
-    /* line 9, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/_buttons.scss */
+    /* line 9, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/_buttons.scss */
     .d-store a.drink-more::before {
       content: "";
       width: 10px;
@@ -40,7 +46,7 @@
       border-top: 2px solid #e5ac34;
       border-right: 2px solid #e5ac34;
       transform: translateY(-50%) rotate(45deg); }
-  /* line 22, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/_buttons.scss */
+  /* line 22, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/_buttons.scss */
   .d-store a.drink-buy {
     color: transparent;
     text-decoration: none;
@@ -53,7 +59,7 @@
     text-align: center;
     font-family: Tahoma;
     position: relative; }
-    /* line 35, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/_buttons.scss */
+    /* line 35, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/_buttons.scss */
     .d-store a.drink-buy::before {
       content: "";
       background-image: url("../images/icons/botao-comprar.png");
@@ -64,173 +70,190 @@
       height: 100%;
       position: absolute;
       width: 100%; }
-  /* line 33, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+  /* line 40, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
   .d-store * {
     box-sizing: border-box; }
-  /* line 36, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+  /* line 43, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
   .d-store ul {
     padding: 0;
     margin: 0;
     list-style: none; }
-  /* line 42, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+  /* line 49, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
   .d-store .clearfix:before,
   .d-store .clearfix:after {
     display: table;
     line-height: 0;
     content: ""; }
-  /* line 47, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+  /* line 54, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
   .d-store .clearfix:after {
     clear: both; }
-  /* line 51, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+  /* line 58, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
   .d-store *:before,
   .d-store *:after {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box; }
-  /* line 56, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+  /* line 63, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
   .d-store .container {
     display: block;
     width: 1460px;
     margin: 0 auto;
     max-width: 83.33%;
     position: relative; }
-  /* line 63, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
-  .d-store .drink-back {
-    position: fixed;
-    left: 20px;
-    top: 270px;
-    width: 86px;
-    height: 86px;
-    background-color: rgba(195, 191, 185, 0.85);
-    color: transparent;
-    border-radius: 50%;
-    z-index: 5000;
-    opacity: 0.5; }
-    /* line 74, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
-    .d-store .drink-back::before {
+  /* line 70, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
+  .d-store .back-home {
+    position: absolute;
+    left: 50%;
+    margin-top: -17px;
+    margin-left: -70px;
+    z-index: 3; }
+  /* line 77, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
+  .d-store header#hero {
+    height: 50vh;
+    min-height: 380px;
+    max-height: 480px;
+    align-items: center;
+    display: flex; }
+    /* line 83, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
+    .d-store header#hero video {
+      position: fixed;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      top: 0;
+      height: 50vh;
+      min-height: 380px;
+      max-height: 480px;
+      z-index: -1000;
+      background: url(../images/header.jpg) no-repeat;
+      background-size: 100% auto;
+      background-position: center; }
+    /* line 97, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
+    .d-store header#hero a.logo {
+      display: flex;
+      height: 80%;
+      margin: 0 auto; }
+    /* line 102, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
+    .d-store header#hero a.questions {
+      background-image: url(../images/questions.png);
       content: "";
       position: absolute;
-      width: 35px;
-      height: 35px;
-      top: 50%;
-      left: 35%;
-      transform: translate(-50%, -50%);
-      border-bottom: 12px solid rgba(0, 0, 0, 0.39);
-      border-left: 12px solid rgba(0, 0, 0, 0.39);
-      transform: translate(0%, -50%) rotate(45deg); }
-  /* line 88, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
-  .d-store header#hero video {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    height: 71.5vh;
-    min-height: 550px;
-    z-index: -1000;
-    background: url(../images/header.jpg) no-repeat;
-    background-size: 100% auto;
-    background-position: center;
-    left: 50%;
-    transform: translateX(-50%); }
-  /* line 102, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
-  .d-store header#hero a.questions {
-    background-image: url(../images/questions.png);
-    content: "";
-    position: absolute;
-    right: 50px;
-    top: 50px;
-    width: 86px;
-    height: 86px;
-    display: none; }
-  /* line 112, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
-  .d-store header#hero h1 {
-    background-image: url(../images/logo-drinkstore.png);
-    color: transparent;
-    display: block;
-    width: 70vw;
-    height: 67.5vh;
-    min-width: 300px;
-    margin: 0 auto;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    text-indent: -10000px;
-    margin-bottom: 30px; }
-  /* line 127, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+      right: 50px;
+      top: 50px;
+      width: 86px;
+      height: 86px;
+      display: none; }
+    /* line 112, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
+    .d-store header#hero h1 {
+      background-image: url(../images/logo-drinkstore.png);
+      background-size: cover;
+      background-position: center;
+      color: transparent;
+      display: block;
+      width: 45vmax;
+      height: 88%;
+      min-width: 500px;
+      margin: 0 auto;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      text-indent: -10000px;
+      margin-bottom: 30px; }
+  /* line 129, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
   .d-store nav.navbar {
     background-image: url(../images/background-menu.png);
     background-size: 100% 100%;
     z-index: 2;
-    max-height: 13vw;
-    height: 13vw;
-    min-height: 150px;
+    height: 15.5vh;
+    min-height: 140px;
+    max-height: 150px;
     width: 100%;
     display: block;
     box-shadow: 0 0 50px 10px black;
     position: relative;
-    overflow: hidden; }
-    /* line 140, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+    align-items: center;
+    justify-content: center; }
+    /* line 143, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
     .d-store nav.navbar.navbar-items ul {
-      max-width: 1366px; }
-    /* line 144, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+      max-width: 966px; }
+    /* line 147, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
     .d-store nav.navbar ul {
-      display: table;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      max-width: 1600px;
-      width: 100%; }
-      /* line 152, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+      display: flex;
+      position: relative;
+      margin: 0 auto;
+      padding: 0;
+      min-width: 750px;
+      max-width: 940px;
+      width: 65vw;
+      height: 15.5vh;
+      min-height: 140px;
+      max-height: 150px;
+      align-items: center;
+      align-self: center;
+      justify-content: center; }
+      /* line 161, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
       .d-store nav.navbar ul li {
-        display: table-cell;
+        display: inline-flex;
         vertical-align: middle;
-        width: 16.66%;
         position: relative;
-        height: 100%; }
-        /* line 158, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+        height: 90%;
+        max-height: 140px;
+        margin: 0;
+        width: 18%;
+        justify-content: center;
+        align-items: center; }
+        /* line 171, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
         .d-store nav.navbar ul li div.content {
           margin: 0 15%; }
-          /* line 160, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+          /* line 173, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
           .d-store nav.navbar ul li div.content figure {
             margin: 0;
             padding: 0; }
-          /* line 164, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+          /* line 177, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
           .d-store nav.navbar ul li div.content img {
             display: block;
             width: 100%; }
-        /* line 169, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+        /* line 182, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
         .d-store nav.navbar ul li a {
           display: block;
-          width: 100%;
+          width: 50%;
+          min-width: 125px;
+          max-width: 145px;
+          height: 80%;
+          max-height: 120px;
           color: white;
           font-weight: bold;
           text-transform: uppercase;
           text-decoration: none;
           text-align: center;
-          font-size: 1.1vw; }
-          /* line 178, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+          font-size: 0.9vmax;
+          font-family: tahoma; }
+          /* line 196, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
           .d-store nav.navbar ul li a::before {
             content: " ";
             background-image: url(../images/icons/icons_sprite.png);
-            background-size: 50vw;
             background-repeat: no-repeat;
+            background-size: 700px;
             display: block;
-            width: 8vw;
-            height: 7vw;
+            width: 100px;
+            max-width: 145px;
+            min-height: 80px;
+            max-height: 85px;
+            height: 11vh;
             margin: 0 auto; }
-        /* line 190, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+        /* line 211, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
         .d-store nav.navbar ul li.no-icon a {
+          display: flex;
           font-weight: normal;
-          padding: 0 15%;
-          font-size: 1.1vw;
-          line-height: 1.5vw;
-          font-family: Tahoma; }
-          /* line 196, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+          font-size: 0.88vmax;
+          padding: 0 5%;
+          align-items: center;
+          justify-content: center; }
+          /* line 218, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
           .d-store nav.navbar ul li.no-icon a::before {
             background: none;
             content: none; }
-        /* line 203, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+        /* line 225, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
         .d-store nav.navbar ul li.no-icon:not(:last-child)::after {
           content: "";
           height: 70%;
@@ -244,227 +267,381 @@
           right: 0;
           transform: translateY(-50%);
           z-index: -1; }
-        /* line 219, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+        /* line 241, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
         .d-store nav.navbar ul li.receitas-praticas a::before {
           background-image: url(../images/receitas-praticas.png);
           background-position: center;
           background-size: 11vw;
           height: 13vw;
           width: 12vw; }
-        /* line 228, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+        /* line 250, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
         .d-store nav.navbar ul li.home a::before {
           background-position: 2vw 0; }
-        /* line 233, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+        /* line 255, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
         .d-store nav.navbar ul li.churrasco a::before {
-          background-position: -19.5vw 10px; }
-        /* line 238, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+          background-position: -277px 5px !important; }
+        /* line 260, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
         .d-store nav.navbar ul li.esquenta a::before {
-          background-position: -27vw 10px; }
-        /* line 243, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
-        .d-store nav.navbar ul li.receber-em-casa a::before {
-          background-position: -34.7vw 0; }
-        /* line 248, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+          background-position: -384px 10px; }
+        /* line 264, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
+        .d-store nav.navbar ul li.receber-em-casa {
+          white-space: nowrap; }
+          /* line 265, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
+          .d-store nav.navbar ul li.receber-em-casa a::before {
+            background-position: -490px 0px !important; }
+        /* line 271, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
         .d-store nav.navbar ul li.ofertas a::before {
           background-position: -31.6vw 0; }
-  /* line 255, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
-  .d-store section {
-    position: relative; }
-    /* line 257, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
-    .d-store section:before {
-      content: "Aprecie com modera\00e7\00e3o";
-      position: absolute;
-      left: 15px;
-      bottom: 15px;
-      z-index: 1;
-      color: white;
-      text-transform: uppercase;
-      font-size: 13px; }
-    /* line 267, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
-    .d-store section:after {
-      content: "IMAGENS MERAMENTE ILUSTRATIVAS.";
-      color: white;
-      position: absolute;
-      -ms-writing-mode: tb-rl;
-      writing-mode: vertical-rl;
-      right: 15px;
-      bottom: 15px;
-      z-index: 1;
-      font-size: 12px; }
-  /* line 279, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+  /* line 278, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
   .d-store section.drinks {
-    height: 52vw;
-    max-height: 55vw;
+    height: 101vh;
     display: block;
     overflow: hidden;
-    background-size: cover;
-    background-attachment: fixed;
+    background-size: contain;
+    background-attachment: scroll;
+    background-position: bottom;
     position: relative; }
-    /* line 287, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
-    .d-store section.drinks#churrasco {
-      background-image: url(../images/home/churrasco-background.jpg); }
-      /* line 289, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
-      .d-store section.drinks#churrasco .drink-details::before {
-        background-image: url(../images/icons/icon-churrasco.png); }
-    /* line 293, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
-    .d-store section.drinks#esquenta {
-      background-image: url(../images/home/esquenta-background.jpg); }
-      /* line 295, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
-      .d-store section.drinks#esquenta .drink-details::before {
-        background-image: url(../images/icons/icon-esquenta.png); }
-    /* line 299, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
-    .d-store section.drinks#receber-em-casa {
-      background-image: url(../images/home/receber-em-casa-background.jpg); }
-      /* line 301, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
-      .d-store section.drinks#receber-em-casa .drink-details::before {
-        background-image: url(../images/icons/icon-receber-em-casa.png); }
-    /* line 305, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+    /* line 286, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
     .d-store section.drinks#caipirinha-de-limao {
       background-image: url(../images/churrasco/caipirinha-background.jpg); }
-      /* line 307, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+      /* line 288, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
+      .d-store section.drinks#caipirinha-de-limao .background-shadow {
+        background-image: url(../images/churrasco/caipirinha-base.png); }
+        /* line 290, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
+        .d-store section.drinks#caipirinha-de-limao .background-shadow img {
+          position: relative;
+          height: 107vh;
+          min-height: 450px;
+          bottom: -2vh;
+          margin: 0 auto;
+          margin-left: 42%; }
+      /* line 299, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
       .d-store section.drinks#caipirinha-de-limao .drink-details::before {
         background-image: url(../images/icons/churrasco/caipirinha-de-limao.png);
         top: -5vw; }
-    /* line 312, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+    /* line 304, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
     .d-store section.drinks#red-citrus {
       background-image: url(../images/churrasco/red-citrus-background.jpg); }
-      /* line 314, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+      /* line 306, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
+      .d-store section.drinks#red-citrus .background-shadow {
+        background-image: url(../images/churrasco/red-citrus-base.png); }
+        /* line 308, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
+        .d-store section.drinks#red-citrus .background-shadow img {
+          position: relative;
+          height: 102vh;
+          min-height: 450px;
+          bottom: -18vh;
+          margin: 0 auto;
+          margin-left: 15%; }
+      /* line 317, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
       .d-store section.drinks#red-citrus .drink-details::before {
         background-image: url(../images/icons/churrasco/red-citrus.png); }
-    /* line 318, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+    /* line 321, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
     .d-store section.drinks#caipiroska-de-morango {
       background-image: url(../images/churrasco/caipiroska-de-morango-background.jpg); }
-      /* line 320, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+      /* line 323, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
+      .d-store section.drinks#caipiroska-de-morango .background-shadow {
+        background-image: url(../images/churrasco/caipiroska-de-morango-base.png); }
+        /* line 325, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
+        .d-store section.drinks#caipiroska-de-morango .background-shadow img {
+          position: relative;
+          height: 107vh;
+          min-height: 450px;
+          bottom: -2vh;
+          margin: 0 auto;
+          margin-left: 42%; }
+      /* line 334, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
       .d-store section.drinks#caipiroska-de-morango .drink-details::before {
         background-image: url(../images/icons/churrasco/caipiroska-de-morango.png); }
-    /* line 324, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+    /* line 338, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
     .d-store section.drinks#shot-mel-limao {
       background-image: url(../images/churrasco/shot-mel-limao-background.jpg); }
-      /* line 326, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+      /* line 340, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
+      .d-store section.drinks#shot-mel-limao .background-shadow {
+        background-image: url(../images/churrasco/shot-mel-limao-base.png); }
+        /* line 342, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
+        .d-store section.drinks#shot-mel-limao .background-shadow img {
+          position: relative;
+          height: 107vh;
+          min-height: 450px;
+          bottom: 5vh;
+          margin: 0 auto;
+          margin-left: 12%; }
+      /* line 351, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
       .d-store section.drinks#shot-mel-limao .drink-details::before {
         background-image: url(../images/icons/churrasco/shot-mel-e-limao.png); }
-    /* line 330, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+    /* line 355, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
     .d-store section.drinks#pronto-para-beber {
       background-image: url(../images/churrasco/pronto-para-beber-background.jpg); }
-      /* line 332, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+      /* line 357, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
+      .d-store section.drinks#pronto-para-beber .background-shadow {
+        background-image: url(../images/churrasco/pronto-para-beber-base.png); }
+        /* line 359, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
+        .d-store section.drinks#pronto-para-beber .background-shadow img {
+          position: relative;
+          height: 98vh;
+          min-height: 450px;
+          bottom: -16vh;
+          margin: 0 auto;
+          margin-left: 42%; }
+      /* line 368, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
       .d-store section.drinks#pronto-para-beber .drink-details::before {
         background-image: url(../images/icons/churrasco/pronto-para-beber.png);
         top: -3vw; }
-    /* line 337, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+    /* line 373, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
     .d-store section.drinks#smirnoff-cola {
       background-image: url(../images/esquenta/smirnoff-cola-background.jpg); }
-      /* line 339, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+      /* line 375, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
+      .d-store section.drinks#smirnoff-cola .background-shadow {
+        background-image: url(../images/esquenta/smirnoff-cola-base.png); }
+        /* line 377, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
+        .d-store section.drinks#smirnoff-cola .background-shadow img {
+          position: relative;
+          height: 88vh;
+          min-height: 450px;
+          bottom: -19vh;
+          margin: 0 auto;
+          margin-left: 50%; }
+      /* line 386, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
       .d-store section.drinks#smirnoff-cola .drink-details::before {
         background-image: url(../images/icons/esquenta/smirnoff-cola.png); }
-    /* line 343, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+    /* line 390, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
     .d-store section.drinks#ciroc-night {
       background-image: url(../images/esquenta/ciroc-night-background.jpg); }
-      /* line 345, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+      /* line 392, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
+      .d-store section.drinks#ciroc-night .background-shadow {
+        background-image: url(../images/esquenta/ciroc-night-base.png); }
+        /* line 394, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
+        .d-store section.drinks#ciroc-night .background-shadow img {
+          position: relative;
+          height: 88vh;
+          min-height: 450px;
+          bottom: -18vh;
+          margin: 0 auto;
+          margin-left: 19%; }
+      /* line 403, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
       .d-store section.drinks#ciroc-night .drink-details::before {
         background-image: url(../images/icons/esquenta/ciroc-night.png); }
-    /* line 349, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+    /* line 407, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
     .d-store section.drinks#red-citrus-esquenta {
       background-image: url(../images/esquenta/red-citrus-background.jpg); }
-      /* line 351, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+      /* line 409, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
+      .d-store section.drinks#red-citrus-esquenta .background-shadow {
+        background-image: url(../images/esquenta/red-citrus-base.png); }
+        /* line 411, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
+        .d-store section.drinks#red-citrus-esquenta .background-shadow img {
+          position: relative;
+          height: 88vh;
+          min-height: 450px;
+          bottom: -22vh;
+          margin: 0 auto;
+          margin-left: 47%; }
+      /* line 420, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
       .d-store section.drinks#red-citrus-esquenta .drink-details::before {
         background-image: url(../images/icons/esquenta/red-citrus.png); }
-    /* line 355, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+    /* line 424, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
     .d-store section.drinks#ketel-one-lemon-tea {
       background-image: url(../images/esquenta/ketel-one-lemon-tea-background.jpg); }
-      /* line 357, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+      /* line 426, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
+      .d-store section.drinks#ketel-one-lemon-tea .background-shadow {
+        background-image: url(../images/esquenta/ketel-one-lemon-tea-base.png); }
+        /* line 428, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
+        .d-store section.drinks#ketel-one-lemon-tea .background-shadow img {
+          position: relative;
+          height: 86vh;
+          min-height: 450px;
+          bottom: -19vh;
+          margin: 0 auto;
+          margin-left: 16%; }
+      /* line 437, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
       .d-store section.drinks#ketel-one-lemon-tea .drink-details::before {
         background-image: url(../images/icons/esquenta/ketel-one-lemon-tea.png); }
-    /* line 361, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+    /* line 441, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
     .d-store section.drinks#shot-fogosanto {
       background-image: url(../images/esquenta/shot-fogosanto-background.jpg); }
-      /* line 363, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+      /* line 443, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
+      .d-store section.drinks#shot-fogosanto .background-shadow {
+        background-image: url(../images/esquenta/shot-fogosanto-base.png); }
+        /* line 445, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
+        .d-store section.drinks#shot-fogosanto .background-shadow img {
+          position: relative;
+          height: 82vh;
+          min-height: 450px;
+          bottom: -15vh;
+          margin: 0 auto;
+          margin-left: 56%; }
+      /* line 454, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
       .d-store section.drinks#shot-fogosanto .drink-details::before {
         background-image: url(../images/icons/esquenta/shot-fogosanto.png); }
-    /* line 367, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+    /* line 458, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
     .d-store section.drinks#prontos-para-beber {
       background-image: url(../images/esquenta/prontos-para-beber-background.jpg); }
-      /* line 369, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+      /* line 460, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
+      .d-store section.drinks#prontos-para-beber .background-shadow {
+        background-image: url(../images/esquenta/prontos-para-beber-base.png); }
+        /* line 462, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
+        .d-store section.drinks#prontos-para-beber .background-shadow img {
+          position: relative;
+          height: 98vh;
+          min-height: 450px;
+          bottom: -16vh;
+          margin: 0 auto;
+          margin-left: 15%; }
+      /* line 471, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
       .d-store section.drinks#prontos-para-beber .drink-details::before {
         background-image: url(../images/icons/esquenta/prontos-para-beber.png);
         top: -3vw; }
-    /* line 374, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+    /* line 476, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
     .d-store section.drinks#tanqueray-tonic {
       background-image: url(../images/receber-em-casa/tanqueray-tonic-background.jpg); }
-      /* line 376, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+      /* line 478, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
+      .d-store section.drinks#tanqueray-tonic .background-shadow {
+        background-image: url(../images/receber-em-casa/tanqueray-tonic-base.png); }
+        /* line 480, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
+        .d-store section.drinks#tanqueray-tonic .background-shadow img {
+          position: relative;
+          height: 97vh;
+          min-height: 400px;
+          bottom: -22vh;
+          margin: 0 auto;
+          margin-left: 48%; }
+      /* line 489, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
       .d-store section.drinks#tanqueray-tonic .drink-details::before {
         background-image: url(../images/icons/receber-em-casa/tanqueray-tonic.png); }
-    /* line 380, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+    /* line 493, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
     .d-store section.drinks#ciroc-peach-collins {
       background-image: url(../images/receber-em-casa/ciroc-peach-collins-background.jpg); }
-      /* line 382, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+      /* line 495, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
+      .d-store section.drinks#ciroc-peach-collins .background-shadow {
+        background-image: url(../images/receber-em-casa/ciroc-peach-collins-base.png); }
+        /* line 497, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
+        .d-store section.drinks#ciroc-peach-collins .background-shadow img {
+          position: relative;
+          height: 102vh;
+          min-height: 450px;
+          bottom: -18vh;
+          margin: 0 auto;
+          margin-left: 14%; }
+      /* line 506, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
       .d-store section.drinks#ciroc-peach-collins .drink-details::before {
         background-image: url(../images/icons/receber-em-casa/ciroc-peach-collins.png); }
-    /* line 386, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+    /* line 510, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
     .d-store section.drinks#red-citrus-receberemcasa {
       background-image: url(../images/receber-em-casa/red-citrus-background.jpg); }
-      /* line 388, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+      /* line 512, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
+      .d-store section.drinks#red-citrus-receberemcasa .background-shadow {
+        background-image: url(../images/receber-em-casa/red-citrus-base.png); }
+        /* line 514, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
+        .d-store section.drinks#red-citrus-receberemcasa .background-shadow img {
+          position: relative;
+          height: 102vh;
+          min-height: 450px;
+          bottom: -10vh;
+          margin: 0 auto;
+          margin-left: 46%; }
+      /* line 523, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
       .d-store section.drinks#red-citrus-receberemcasa .drink-details::before {
         background-image: url(../images/icons/receber-em-casa/red-citrus.png); }
-    /* line 392, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
-    .d-store section.drinks#gold-frost {
-      background-image: url(../images/receber-em-casa/gold-frost-background.jpg); }
-      /* line 394, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
-      .d-store section.drinks#gold-frost .drink-details::before {
-        background-image: url(../images/icons/receber-em-casa/gold-frost.png); }
-    /* line 398, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+    /* line 527, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
     .d-store section.drinks#black-julep {
       background-image: url(../images/receber-em-casa/black-julep-background.jpg); }
-      /* line 400, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+      /* line 529, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
+      .d-store section.drinks#black-julep .background-shadow {
+        background-image: url(../images/receber-em-casa/black-julep-base.png); }
+        /* line 531, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
+        .d-store section.drinks#black-julep .background-shadow img {
+          position: relative;
+          height: 94vh;
+          min-height: 450px;
+          bottom: -22vh;
+          margin: 0 auto;
+          margin-left: 16%; }
+      /* line 540, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
       .d-store section.drinks#black-julep .drink-details::before {
         background-image: url(../images/icons/receber-em-casa/black-julep.png); }
-    /* line 404, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+    /* line 544, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
+    .d-store section.drinks#gold-frost {
+      background-image: url(../images/receber-em-casa/gold-frost-background.jpg); }
+      /* line 546, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
+      .d-store section.drinks#gold-frost .background-shadow {
+        background-image: url(../images/receber-em-casa/gold-frost-base.png); }
+        /* line 548, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
+        .d-store section.drinks#gold-frost .background-shadow img {
+          position: relative;
+          height: 101vh;
+          min-height: 450px;
+          bottom: -15vh;
+          margin: 0 auto;
+          margin-left: 48%; }
+      /* line 557, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
+      .d-store section.drinks#gold-frost .drink-details::before {
+        background-image: url(../images/icons/receber-em-casa/gold-frost.png); }
+    /* line 561, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
     .d-store section.drinks figure.background-shadow {
-      background-size: 200%;
-      background-position: top;
+      background-size: contain;
+      background-position: bottom;
+      background-repeat: no-repeat;
       z-index: 1;
       width: 100%;
       height: 100%;
+      bottom: 0;
       position: absolute;
       margin: 0;
       z-index: 0; }
-      /* line 413, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
-      .d-store section.drinks figure.background-shadow img {
-        width: 100%;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        height: 100%; }
-    /* line 421, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+    /* line 573, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
     .d-store section.drinks .drink-item {
       margin-top: 4vw;
-      height: 100%; }
-      /* line 425, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+      height: 100%;
+      width: 960px;
+      position: relative; }
+      /* line 578, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
+      .d-store section.drinks .drink-item:before {
+        content: "";
+        position: absolute;
+        bottom: 8vh;
+        left: 15px;
+        z-index: 3;
+        color: white;
+        text-transform: uppercase;
+        font-size: 13px;
+        background: url(../images/icons/txt_apreciemoderacao.png);
+        width: 162px;
+        height: 20px; }
+      /* line 591, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
+      .d-store section.drinks .drink-item:after {
+        content: "IMAGENS MERAMENTE ILUSTRATIVAS.";
+        font-family: tahoma;
+        color: white;
+        position: absolute;
+        left: 185px;
+        bottom: 8.5vh;
+        z-index: 3;
+        font-size: 11px;
+        text-shadow: 1px 1px 8px #000000;
+        letter-spacing: 1px; }
+      /* line 604, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
       .d-store section.drinks .drink-item.drink-item--right .drink-details {
         float: right;
         text-align: right;
         padding-left: 0;
         padding-right: 11vw; }
-        /* line 430, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+        /* line 609, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
         .d-store section.drinks .drink-item.drink-item--right .drink-details::before {
           right: 0;
           left: auto; }
-        /* line 434, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
-        .d-store section.drinks .drink-item.drink-item--right .drink-details p {
-          float: right; }
-        /* line 437, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+        /* line 613, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
         .d-store section.drinks .drink-item.drink-item--right .drink-details a {
-          float: right; }
-          /* line 439, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
-          .d-store section.drinks .drink-item.drink-item--right .drink-details a.drink-buy {
-            width: 100%; }
-      /* line 445, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+          margin: 86px 0 3.2vmin 15vw;
+          text-align: center; }
+      /* line 619, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
       .d-store section.drinks .drink-item .drink-details {
-        padding-left: 11vw;
+        padding-left: 140px;
         position: relative;
-        float: left;
-        width: 40vw;
-        min-width: 500px;
-        max-width: 750px; }
-        /* line 452, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+        width: 50vw;
+        min-width: 400px;
+        max-width: 500px;
+        padding-top: 3%; }
+        /* line 626, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
         .d-store section.drinks .drink-item .drink-details::before {
           content: "";
           background-size: cover;
@@ -473,115 +650,144 @@
           display: block;
           position: absolute;
           left: 0; }
-        /* line 461, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
-        .d-store section.drinks .drink-item .drink-details h3 {
-          margin: 0;
-          padding: 0;
-          font-family: 'Duke-Fill';
-          font-size: 2.5vw;
-          color: white;
-          font-weight: normal;
-          padding-top: 15px;
-          text-transform: uppercase; }
-        /* line 471, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
-        .d-store section.drinks .drink-item .drink-details h2 {
-          font-family: 'WisdomScript';
-          color: #e5ac34;
-          font-size: 4vw;
-          margin: -1.2vw 0 2vw 0;
-          font-weight: normal; }
-        /* line 478, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
-        .d-store section.drinks .drink-item .drink-details p {
-          color: white;
-          width: 350px;
-          line-height: 30px;
-          font-size: 22px;
-          display: block;
-          margin: 0 0 15px 0; }
-        /* line 486, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+        /* line 635, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
         .d-store section.drinks .drink-item .drink-details.drink-details--item {
-          width: 30vw;
           background-color: rgba(0, 0, 0, 0.39);
           border-radius: 16px;
-          padding: 2.5vw;
+          padding: 1vmin 0 1vmin 0;
           min-width: initial;
-          max-width: 500px;
+          width: 35vmax;
+          min-width: 450px;
+          max-width: 550px;
           text-align: left;
-          left: 5vw;
-          top: 5vw; }
-          /* line 496, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+          left: -1vw;
+          top: 5vmax; }
+          /* line 646, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
           .d-store section.drinks .drink-item .drink-details.drink-details--item::before {
             content: '';
             left: 0;
             top: 0;
-            background-size: 100% auto;
+            background-size: 80% auto;
             background-repeat: no-repeat;
             background-position: left top;
             height: 20vw;
             width: 11vw;
-            left: -5vw;
+            left: -4.3vw;
             top: -6vw; }
-          /* line 508, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+          /* line 658, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
           .d-store section.drinks .drink-item .drink-details.drink-details--item header {
-            padding-left: 3.5vw; }
-            /* line 510, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+            margin: 0 auto;
+            width: 100%; }
+            /* line 661, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
             .d-store section.drinks .drink-item .drink-details.drink-details--item header h2 {
               margin: 0;
-              padding: 0;
+              padding: 3vmin 2vw 10px 3.5vw;
               font-family: 'Duke-Fill';
-              font-size: 3vw;
+              font-size: 3.8vw;
+              line-height: 0.8em;
               color: white;
-              font-weight: normal;
-              padding-top: 0;
-              text-align: center;
+              font-weight: bold;
               text-transform: uppercase;
-              white-space: nowrap; }
-              /* line 521, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
-              .d-store section.drinks .drink-item .drink-details.drink-details--item header h2 sup {
-                font-size: 1.6vw; }
-            /* line 525, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+              text-align: center; }
+            /* line 672, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
             .d-store section.drinks .drink-item .drink-details.drink-details--item header h3 {
-              font-family: 'WisdomScript';
+              font-family: 'thirsty';
+              width: 80%;
+              padding: 0 0 0 0.3vw;
+              font-size: 3.2vmin;
+              line-height: 0.9em;
               color: #e5ac34;
-              font-size: 1.4vw;
-              margin: -1.2vw 0 2vw 0;
+              margin: -10px auto 1.2vw;
               font-weight: normal;
-              text-align: center;
-              letter-spacing: 0;
-              text-transform: none;
-              padding-top: 8px; }
-          /* line 537, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
-          .d-store section.drinks .drink-item .drink-details.drink-details--item li {
+              text-align: center; }
+          /* line 686, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
+          .d-store section.drinks .drink-item .drink-details.drink-details--item ul,
+          .d-store section.drinks .drink-item .drink-details.drink-details--item p,
+          .d-store section.drinks .drink-item .drink-details.drink-details--item div.info_doses {
+            margin: 0 3.8vw;
+            font-family: Tahoma; }
+          /* line 691, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
+          .d-store section.drinks .drink-item .drink-details.drink-details--item ul,
+          .d-store section.drinks .drink-item .drink-details.drink-details--item p {
+            font-size: 1.8vmin;
+            line-height: 1.5vmax;
+            margin: 1.2vmin 3.8vw 0;
+            padding: 0 9vmin 1vmin 1vw; }
+          /* line 698, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
+          .d-store section.drinks .drink-item .drink-details.drink-details--item ul li {
             color: white;
-            font-family: Tahoma;
-            font-size: 1.1vw;
-            line-height: 1.6vw;
-            margin-left: 16px; }
-            /* line 543, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
-            .d-store section.drinks .drink-item .drink-details.drink-details--item li::before {
+            position: relative;
+            padding-left: 18px; }
+            /* line 702, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
+            .d-store section.drinks .drink-item .drink-details.drink-details--item ul li::before {
               content: "\2022";
-              margin-right: 8px;
+              position: absolute;
+              left: 0;
               color: #e5ac34;
               font-family: Tahoma; }
-          /* line 550, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+          /* line 711, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
           .d-store section.drinks .drink-item .drink-details.drink-details--item p {
-            font-size: 1vw;
-            line-height: 1.4vw;
-            margin: 30px 0;
-            width: auto; }
-      /* line 559, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+            font-weight: 400;
+            width: auto;
+            font-family: tahoma;
+            color: #fff;
+            padding-bottom: 7vmin; }
+          /* line 718, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
+          .d-store section.drinks .drink-item .drink-details.drink-details--item div.info_doses {
+            margin-left: 5vw;
+            background-color: rgba(0, 0, 0, 0.39);
+            border-radius: 0 36px 36px 0;
+            border: 2px solid #fff;
+            padding: 5px 20px 5px 1.3vw;
+            font-weight: 400;
+            display: block;
+            float: left;
+            font-family: tahoma;
+            color: #fff;
+            font-size: 1.1vmin;
+            text-transform: uppercase;
+            position: relative;
+            line-height: 1.1em;
+            text-align: center; }
+            /* line 734, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
+            .d-store section.drinks .drink-item .drink-details.drink-details--item div.info_doses ::before {
+              content: '';
+              background: url(../images/icons/icon_garrafa.png);
+              background-size: cover;
+              width: 3.5vmin;
+              height: 11.5vmin;
+              display: block;
+              position: absolute;
+              top: -5.7vmin;
+              left: -2vmin; }
+            /* line 745, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
+            .d-store section.drinks .drink-item .drink-details.drink-details--item div.info_doses span {
+              font-weight: bold;
+              font-size: 1.5vmin; }
+          /* line 750, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
+          .d-store section.drinks .drink-item .drink-details.drink-details--item a {
+            margin: 5px 0 3.2vmin 1vw;
+            text-align: center;
+            left: 13vw;
+            position: relative;
+            width: 17vw; }
+      /* line 760, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
       .d-store section.drinks .drink-item.drink-item--right .drink-details--item {
-        left: auto;
-        right: 5vw; }
-        /* line 562, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+        left: -3%;
+        background-size: 50%; }
+        /* line 763, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
         .d-store section.drinks .drink-item.drink-item--right .drink-details--item::before {
           left: auto;
-          right: -5vw; }
-        /* line 566, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+          left: -4.4vw; }
+        /* line 767, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
         .d-store section.drinks .drink-item.drink-item--right .drink-details--item header {
           padding-left: 0;
-          padding-right: 3.5vw; }
-      /* line 572, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+          padding-right: 1.5vw; }
+        /* line 771, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
+        .d-store section.drinks .drink-item.drink-item--right .drink-details--item p {
+          margin: 2.2vmin 3.8vw 0;
+          padding: 1vmin 0 7vmin 1vw; }
+      /* line 777, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
       .d-store section.drinks .drink-item .drink-actions {
         width: 100%;
         font-size: 22px;
@@ -590,24 +796,24 @@
         color: white;
         text-transform: uppercase;
         position: absolute; }
-        /* line 580, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+        /* line 785, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
         .d-store section.drinks .drink-item .drink-actions.drink-actions--right {
           text-align: right;
           right: 0;
           left: auto; }
-        /* line 585, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+        /* line 790, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
         .d-store section.drinks .drink-item .drink-actions p {
           position: relative;
           margin-bottom: 10px; }
-          /* line 588, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+          /* line 793, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
           .d-store section.drinks .drink-item .drink-actions p span {
             color: #e5ac34;
             margin-right: 4px; }
-        /* line 593, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+        /* line 798, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
         .d-store section.drinks .drink-item .drink-actions .drink-actions-link {
           float: left;
           margin-left: 15px; }
-          /* line 596, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+          /* line 801, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
           .d-store section.drinks .drink-item .drink-actions .drink-actions-link a {
             color: transparent;
             width: 68px;
@@ -617,20 +823,19 @@
             display: inline-block;
             float: left;
             border-radius: 50%; }
-            /* line 605, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+            /* line 810, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
             .d-store section.drinks .drink-item .drink-actions .drink-actions-link a.add-to-cart {
               background-image: url(../images/icons/adicionar-ao-carrinho.png); }
-            /* line 608, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+            /* line 813, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
             .d-store section.drinks .drink-item .drink-actions .drink-actions-link a.more {
               background-image: url(../images/icons/veja-mais.png);
               margin-left: 6px; }
-          /* line 613, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+          /* line 818, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
           .d-store section.drinks .drink-item .drink-actions .drink-actions-link.drink-actions-link--right {
             float: right;
             margin-left: 0; }
-      /* line 619, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+      /* line 824, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
       .d-store section.drinks .drink-item .drink-info {
-        float: left;
         width: auto;
         background-color: rgba(0, 0, 0, 0.39);
         border-radius: 9px;
@@ -639,17 +844,18 @@
         font-weight: bold;
         font-size: 16px;
         position: relative;
-        padding-top: 6px;
-        padding-bottom: 6px;
-        padding-right: 7px;
-        padding-left: calc(7px + 48px);
-        margin-left: 10px;
-        top: 35px; }
-        /* line 635, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+        padding-top: 7px;
+        padding-bottom: 10px;
+        padding-right: 12px;
+        padding-left: calc(12px + 48px);
+        margin-left: 12px;
+        position: absolute;
+        top: 3%; }
+        /* line 840, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
         .d-store section.drinks .drink-item .drink-info .measures {
           font-size: 10px;
           color: #e5ac34; }
-        /* line 639, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+        /* line 844, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
         .d-store section.drinks .drink-item .drink-info .difficulty {
           width: 60px;
           height: 60px;
@@ -661,7 +867,7 @@
           position: absolute;
           top: -12%;
           left: -10px; }
-          /* line 650, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+          /* line 855, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
           .d-store section.drinks .drink-item .drink-info .difficulty::before {
             content: "";
             width: 53px;
@@ -675,7 +881,7 @@
             position: absolute;
             top: 50%;
             left: 50%; }
-          /* line 664, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+          /* line 869, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
           .d-store section.drinks .drink-item .drink-info .difficulty::after {
             content: "";
             width: 55px;
@@ -688,42 +894,43 @@
             position: absolute;
             top: 50%;
             left: 50%; }
-          /* line 678, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
-          .d-store section.drinks .drink-item .drink-info .difficulty.difficulty--easy::before {
+          /* line 883, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
+          .d-store section.drinks .drink-item .drink-info .difficulty.difficulty--facil::before {
             border-left: 4px solid white;
             border-bottom: 4px solid white; }
-          /* line 682, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
-          .d-store section.drinks .drink-item .drink-info .difficulty.difficulty--easy::after {
+          /* line 887, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
+          .d-store section.drinks .drink-item .drink-info .difficulty.difficulty--facil::after {
             border-bottom: 6px solid #e5ac34;
             transform: translate(-50%, -50%); }
-          /* line 688, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+          /* line 893, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
           .d-store section.drinks .drink-item .drink-info .difficulty.difficulty--medio::before {
             border-left: 4px solid white;
             border-bottom: 4px solid white;
             border-right: 4px solid white; }
-          /* line 693, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+          /* line 898, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
           .d-store section.drinks .drink-item .drink-info .difficulty.difficulty--medio::after {
             border-right: 6px solid #e5ac34;
             transform: translate(-50%, -50%); }
-        /* line 699, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+        /* line 904, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
         .d-store section.drinks .drink-item .drink-info.drink-info--right {
-          float: right;
+          right: 5%;
+          position: absolute;
           margin-left: 0;
           margin-right: 10px;
-          padding-left: 7px;
+          padding-left: 15px;
           padding-right: calc(7px + 35px); }
-          /* line 705, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+          /* line 911, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
           .d-store section.drinks .drink-item .drink-info.drink-info--right .difficulty {
             right: -22px;
             left: auto; }
-      /* line 711, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+      /* line 917, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
       .d-store section.drinks .drink-item figure {
         margin: 0;
         padding: 0;
         position: absolute;
         bottom: -9vh;
         z-index: 1; }
-        /* line 717, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+        /* line 923, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
         .d-store section.drinks .drink-item figure img {
           position: relative;
           height: 91.74312vh;
@@ -731,13 +938,24 @@
           max-height: 97vh;
           margin: 0;
           padding: 0; }
-  /* line 730, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+    /* line 933, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
+    .d-store section.drinks .back-top {
+      background: url("../images/icons/icons_sprite_ocasioes.png");
+      background-position: -30vmax 0px;
+      background-size: 76vmax;
+      display: block;
+      width: 9vmax;
+      height: 9vmax;
+      position: absolute;
+      bottom: 1.9vmax;
+      right: 0; }
+  /* line 947, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
   .d-store nav.navbar.navbar--esquenta li {
     width: 14.28%; }
-  /* line 735, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+  /* line 952, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
   .d-store #footer {
     background-color: #72BB19; }
-    /* line 737, /Users/ale/Documents/projects/drinkstore/loja/v000_ed00/sass/style.scss */
+    /* line 954, /Volumes/Macintosh HD m/Users/alem/Dropbox/jobs/2-workspace/projects/drinkstore/loja/v000_ed02/sass/style.scss */
     .d-store #footer p {
       width: 940px;
       padding: 30px 0;

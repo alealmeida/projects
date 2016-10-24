@@ -20,11 +20,30 @@ function clickAndScroll(e) {
 	//var ancoraPosition = $(hash).offset().top - menuHeight;
 	var ancoraPosition = $(hash).offset().top;
 	var distance = Math.abs(ancoraPosition - winTop);
-	var timer = distance / 1.2;
+	var timer = distance / 1.8;
 	father.addClass('active');
 	$('html, body').animate({
 		scrollTop: ancoraPosition
-	}, timer).css({
-		transition: 'all 0.1s ease-in-out 0.1s'
-	});
+	}, timer);
 }
+//	function Scrolling() {
+//		var topWindow = $(window).scrollTop();
+//		if (topWindow >= menuPosition) {
+//			menu.css({
+//				top: 0,
+//				position: 'fixed'
+//			});
+//			loja.css({
+//				top: menuHeight
+//			})
+//		} else {
+//			menu.css({
+//				top: 0,
+//				position: 'relative'
+//			});
+//			loja.css({
+//				top: 0
+//			})
+//		}
+//	}
+//$(window).stop().on('scroll', Scrolling)

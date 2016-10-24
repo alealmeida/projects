@@ -210,8 +210,9 @@
 						&.no-icon {
 							a {
 								display: flex;
-								font-weight: bold;
-								padding: 0 15%;
+								font-weight: normal;
+								font-size: 0.88vmax;
+								padding: 0 5%;
 								align-items: center;
 								justify-content: center;
 								&::before {
@@ -252,12 +253,12 @@
 						}
 						&.churrasco {
 							a::before {
-								background-position: -18.4vw 5px !important;
+								background-position: -277px 5px !important;
 							}
 						}
 						&.esquenta {
 							a::before {
-								background-position: -25.4vw 10px;
+								background-position: -384px 10px;
 							}
 						}
 						&.receber-em-casa {
@@ -275,11 +276,12 @@
 				}
 			}
 			section.drinks {
-				height: 100vh;
+				height: 101vh;
 				display: block;
 				overflow: hidden;
-				background-size: cover;
-				background-attachment: local;
+				background-size: contain;
+				background-attachment: scroll;
+				background-position: bottom;
 				position: relative;
 				&#caipirinha-de-limao {
 					background-image: url(../images/churrasco/caipirinha-background.jpg);
@@ -287,11 +289,11 @@
 						background-image: url(../images/churrasco/caipirinha-base.png);
 						img {
 							position: relative;
-							height: 86vh;
+							height: 107vh;
 							min-height: 450px;
-							bottom: -24vh;
+							bottom: -2vh;
 							margin: 0 auto;
-							margin-left: 37%;
+							margin-left: 42%;
 						}
 					}
 					.drink-details::before {
@@ -304,14 +306,12 @@
 					.background-shadow {
 						background-image: url(../images/churrasco/red-citrus-base.png);
 						img {
-							position: absolute;
-							margin: 0;
-							height: 105vh;
-							min-height: 770px;
-							max-height: 990px;
-							margin-left: 0;
-							right: 50vw;
-							bottom: -20vh;
+							position: relative;
+							height: 102vh;
+							min-height: 450px;
+							bottom: -18vh;
+							margin: 0 auto;
+							margin-left: 15%;
 						}
 					}
 					.drink-details::before {
@@ -321,14 +321,14 @@
 				&#caipiroska-de-morango {
 					background-image: url(../images/churrasco/caipiroska-de-morango-background.jpg);
 					.background-shadow {
-						background-image: url(../images/churrasco/caipiroska-de-morango--base.png);
+						background-image: url(../images/churrasco/caipiroska-de-morango-base.png);
 						img {
 							position: relative;
-							height: 86vh;
+							height: 107vh;
 							min-height: 450px;
-							bottom: -24vh;
+							bottom: -2vh;
 							margin: 0 auto;
-							margin-left: 37%;
+							margin-left: 42%;
 						}
 					}
 					.drink-details::before {
@@ -340,14 +340,12 @@
 					.background-shadow {
 						background-image: url(../images/churrasco/shot-mel-limao-base.png);
 						img {
-							position: absolute;
-							margin: 0;
-							height: 105vh;
-							min-height: 770px;
-							max-height: 990px;
-							margin-left: 0;
-							right: 50vw;
-							bottom: -20vh;
+							position: relative;
+							height: 107vh;
+							min-height: 450px;
+							bottom: 5vh;
+							margin: 0 auto;
+							margin-left: 12%;
 						}
 					}
 					.drink-details::before {
@@ -360,11 +358,11 @@
 						background-image: url(../images/churrasco/pronto-para-beber-base.png);
 						img {
 							position: relative;
-							height: 86vh;
+							height: 98vh;
 							min-height: 450px;
-							bottom: -24vh;
+							bottom: -16vh;
 							margin: 0 auto;
-							margin-left: 37%;
+							margin-left: 42%;
 						}
 					}
 					.drink-details::before {
@@ -429,11 +427,11 @@
 						background-image: url(../images/esquenta/ketel-one-lemon-tea-base.png);
 						img {
 							position: relative;
-							height: 90vh;
+							height: 86vh;
 							min-height: 450px;
-							bottom: -16vh;
+							bottom: -19vh;
 							margin: 0 auto;
-							margin-left: 19%;
+							margin-left: 16%;
 						}
 					}
 					.drink-details::before {
@@ -446,11 +444,11 @@
 						background-image: url(../images/esquenta/shot-fogosanto-base.png);
 						img {
 							position: relative;
-							height: 96vh;
+							height: 82vh;
 							min-height: 450px;
-							bottom: -7vh;
+							bottom: -15vh;
 							margin: 0 auto;
-							margin-left: 45%;
+							margin-left: 56%
 						}
 					}
 					.drink-details::before {
@@ -463,7 +461,7 @@
 						background-image: url(../images/esquenta/prontos-para-beber-base.png);
 						img {
 							position: relative;
-							height: 105vh;
+							height: 98vh;
 							min-height: 450px;
 							bottom: -16vh;
 							margin: 0 auto;
@@ -561,8 +559,8 @@
 					}
 				}
 				figure.background-shadow {
-					background-size: cover;
-					background-position: left bottom;
+					background-size: contain;
+					background-position: bottom;
 					background-repeat: no-repeat;
 					z-index: 1;
 					width: 100%;
